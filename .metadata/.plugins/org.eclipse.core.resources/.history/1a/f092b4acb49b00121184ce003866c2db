@@ -1,0 +1,7 @@
+package ru.osm.dkiselev.atlasgenerator;
+
+import java.awt.Polygon;
+
+public class GridGenerator {
+	private Polygon coverage;
+}

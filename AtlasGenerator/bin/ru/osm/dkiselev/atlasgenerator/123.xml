@@ -1,0 +1,15 @@
+<draw:frame draw:name="map_frame" draw:style-name="fr1"
+	draw:z-index="0" svg:height="17.986cm" svg:width="16.222cm" svg:x="2.431cm"
+	svg:y="2.78cm" text:anchor-page-number="1" text:anchor-type="page">
+	<draw:text-box>
+		<text:p text:style-name="Frame_20_contents">
+			<draw:frame draw:name="graphics1" draw:style-name="fr5"
+				draw:z-index="7" style:rel-height="100%" style:rel-width="100%"
+				svg:height="17.683cm" svg:width="15.919cm" text:anchor-type="paragraph">
+				<draw:image xlink:actuate="onLoad"
+					xlink:href="Pictures/100000000000077B0000084C940CF360.png"
+					xlink:show="embed" xlink:type="simple"></draw:image>
+			</draw:frame>
+		</text:p>
+	</draw:text-box>
+</draw:frame>

@@ -1,0 +1,6 @@
+package ru.osm.dkiselev.atlasgenerator;
+
+public class BBOX {
+	private Point nw;
+	private Point se;
+}

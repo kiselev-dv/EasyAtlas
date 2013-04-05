@@ -1,0 +1,120 @@
+<office:text text:use-soft-page-breaks="true">
+	<text:sequence-decls>
+		<text:sequence-decl text:display-outline-level="0"
+			text:name="Illustration"></text:sequence-decl>
+		<text:sequence-decl text:display-outline-level="0"
+			text:name="Table"></text:sequence-decl>
+		<text:sequence-decl text:display-outline-level="0"
+			text:name="Text"></text:sequence-decl>
+		<text:sequence-decl text:display-outline-level="0"
+			text:name="Drawing"></text:sequence-decl>
+	</text:sequence-decls>
+	<draw:frame draw:name="map_frame" draw:style-name="fr1"
+		draw:z-index="0" svg:height="17.986cm" svg:width="16.222cm" svg:x="2.431cm"
+		svg:y="2.78cm" text:anchor-page-number="1" text:anchor-type="page">
+		<draw:text-box>
+			<text:p text:style-name="Frame_20_contents">
+				<draw:frame draw:name="graphics1" draw:style-name="fr5"
+					draw:z-index="7" svg:height="17.655cm" svg:width="15.919cm"
+					text:anchor-type="paragraph">
+					<draw:image xlink:actuate="onLoad"
+						xlink:href="Pictures/100000000000077B0000084C0845A435.png"
+						xlink:show="embed" xlink:type="simple"></draw:image>
+				</draw:frame>
+			</text:p>
+		</draw:text-box>
+	</draw:frame>
+	<draw:frame draw:name="top-page-ref" draw:style-name="fr2"
+		draw:z-index="4" svg:width="2cm" svg:y="2.129cm"
+		text:anchor-page-number="1" text:anchor-type="page">
+		<draw:text-box fo:min-height="0.499cm">
+			<text:p text:style-name="P2"></text:p>
+		</draw:text-box>
+	</draw:frame>
+	<draw:frame draw:name="right-page-ref" draw:style-name="fr3"
+		draw:z-index="1" svg:width="2cm" svg:x="18.77cm" svg:y="10.77cm"
+		text:anchor-page-number="1" text:anchor-type="page">
+		<draw:text-box fo:min-height="0.499cm">
+			<text:p text:style-name="Frame_20_contents"></text:p>
+		</draw:text-box>
+	</draw:frame>
+	<draw:frame draw:name="Frame2" draw:style-name="fr3"
+		draw:z-index="2" svg:width="2cm" svg:x="0.25cm" svg:y="10.52cm"
+		text:anchor-page-number="1" text:anchor-type="page">
+		<draw:text-box fo:min-height="0.499cm">
+			<text:p text:style-name="P1"></text:p>
+		</draw:text-box>
+	</draw:frame>
+	<draw:frame draw:name="Frame1" draw:style-name="fr4"
+		draw:z-index="3" svg:width="2cm" svg:x="9.94cm" svg:y="20.941cm"
+		text:anchor-page-number="1" text:anchor-type="page">
+		<draw:text-box fo:min-height="0.499cm">
+			<text:p text:style-name="P2"></text:p>
+		</draw:text-box>
+	</draw:frame>
+	<draw:frame draw:name="notes" draw:style-name="fr3"
+		draw:z-index="5" svg:width="16.214cm" svg:x="2.439cm" svg:y="21.8cm"
+		text:anchor-page-number="1" text:anchor-type="page">
+		<draw:text-box fo:min-height="5.779cm">
+			<text:p text:style-name="Frame_20_contents"></text:p>
+		</draw:text-box>
+	</draw:frame>
+	<draw:frame draw:name="page-number" draw:style-name="fr2"
+		draw:z-index="6" svg:width="2cm" svg:y="28.049cm"
+		text:anchor-page-number="1" text:anchor-type="page">
+		<draw:text-box fo:min-height="0.499cm">
+			<text:p text:style-name="Frame_20_contents"></text:p>
+		</draw:text-box>
+	</draw:frame>
+	<draw:frame draw:name="Frame3" draw:style-name="fr1"
+		draw:z-index="8" svg:height="17.986cm" svg:width="16.222cm" svg:x="2.431cm"
+		svg:y="2.78cm" text:anchor-page-number="2" text:anchor-type="page">
+		<draw:text-box>
+			<text:p text:style-name="Frame_20_contents"></text:p>
+		</draw:text-box>
+	</draw:frame>
+	<draw:frame draw:name="Frame4" draw:style-name="fr3"
+		draw:z-index="9" svg:width="2cm" svg:x="0.25cm" svg:y="10.52cm"
+		text:anchor-page-number="2" text:anchor-type="page">
+		<draw:text-box fo:min-height="0.499cm">
+			<text:p text:style-name="P1"></text:p>
+		</draw:text-box>
+	</draw:frame>
+	<draw:frame draw:name="Frame5" draw:style-name="fr2"
+		draw:z-index="10" svg:width="2cm" svg:y="2.129cm"
+		text:anchor-page-number="2" text:anchor-type="page">
+		<draw:text-box fo:min-height="0.499cm">
+			<text:p text:style-name="P2"></text:p>
+		</draw:text-box>
+	</draw:frame>
+	<draw:frame draw:name="Frame6" draw:style-name="fr3"
+		draw:z-index="11" svg:width="2cm" svg:x="18.77cm" svg:y="10.77cm"
+		text:anchor-page-number="2" text:anchor-type="page">
+		<draw:text-box fo:min-height="0.499cm">
+			<text:p text:style-name="Frame_20_contents"></text:p>
+		</draw:text-box>
+	</draw:frame>
+	<draw:frame draw:name="Frame7" draw:style-name="fr4"
+		draw:z-index="12" svg:width="2cm" svg:x="9.94cm" svg:y="20.941cm"
+		text:anchor-page-number="2" text:anchor-type="page">
+		<draw:text-box fo:min-height="0.499cm">
+			<text:p text:style-name="P2"></text:p>
+		</draw:text-box>
+	</draw:frame>
+	<draw:frame draw:name="Frame8" draw:style-name="fr3"
+		draw:z-index="13" svg:width="16.214cm" svg:x="2.439cm" svg:y="21.8cm"
+		text:anchor-page-number="2" text:anchor-type="page">
+		<draw:text-box fo:min-height="5.779cm">
+			<text:p text:style-name="Frame_20_contents"></text:p>
+		</draw:text-box>
+	</draw:frame>
+	<draw:frame draw:name="Frame9" draw:style-name="fr2"
+		draw:z-index="14" svg:width="2cm" svg:y="28.049cm"
+		text:anchor-page-number="2" text:anchor-type="page">
+		<draw:text-box fo:min-height="0.499cm">
+			<text:p text:style-name="Frame_20_contents"></text:p>
+		</draw:text-box>
+	</draw:frame>
+	<text:p text:style-name="P3"></text:p>
+	<text:p text:style-name="P4"></text:p>
+</office:text>

@@ -1,0 +1,14 @@
+package ru.osm.dkiselev.atlasgenerator;
+
+public class MapRasterDataSource {
+	
+	private int dpi;
+	private String wmsURL;
+	
+	public MapRasterDataSource(int dpi, String wmsURL) {
+		this.dpi = dpi;
+		this.wmsURL = wmsURL;
+	}
+	
+	
+}

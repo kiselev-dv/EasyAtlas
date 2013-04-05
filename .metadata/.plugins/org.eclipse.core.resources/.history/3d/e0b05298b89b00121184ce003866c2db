@@ -1,0 +1,26 @@
+package ru.osm.dkiselev.atlasgenerator;
+
+public class Calculator {
+	private static int R=6378137;
+	
+	public static double offsetLon(double lon, double dlMeters) {
+		 lon = 0.0
+
+		 //Earth’s radius, sphere
+
+		 //offsets in meters
+		 dn = 100
+		 de = 100
+
+		 //Coordinate offsets in radians
+		 dLat = dn/R
+		 dLon = de/(R*Cos(Pi*lat/180))
+
+		 //OffsetPosition, decimal degrees
+		 latO = lat + dLat * 180/Pi
+		 lonO = lon + dLon * 180/Pi 
+	}
+	
+	public static double offsetLon();
+	
+}

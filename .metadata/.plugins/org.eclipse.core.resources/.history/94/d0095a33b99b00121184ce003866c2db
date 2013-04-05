@@ -1,0 +1,10 @@
+package ru.osm.dkiselev.atlasgenerator;
+
+public class Calculator {
+	private static final int R=6378137;
+
+	public static Point addOffset(Point p, double de, double dn)
+	{
+		
+	}
+}

@@ -1,0 +1,19 @@
+package ru.osm.dkiselev.atlasgenerator;
+
+public class BBOX {
+	private Point nw;
+	private Point se;
+	public Point getNw() {
+		return nw;
+	}
+	public void setNw(Point nw) {
+		this.nw = nw;
+	}
+	public Point getSe() {
+		return se;
+	}
+	public void setSe(Point se) {
+		this.se = se;
+	}
+	
+}

@@ -1,0 +1,53 @@
+package ru.osm.dkiselev.atlasgenerator;
+
+import static java.lang.Math.cos;
+import static java.lang.Math.toRadians;
+
+import java.awt.geom.Area;
+import java.awt.geom.PathIterator;
+import java.awt.geom.Point2D;
+import java.awt.geom.Point2D.Double;
+import java.util.ArrayList;
+
+public class Calculator {
+	
+	private static double METERS_IN_DEGREE = 111111;
+	
+	public static Point addOffset(Point p, double de, double dn)
+	{
+		//Position, decimal degrees
+		double lat = p.getLat();
+		double lon = p.getLon();
+
+		return new Point(lon + de / (METERS_IN_DEGREE * cos(toRadians(lat))), lat + dn / METERS_IN_DEGREE);
+	}
+	
+	public static double getArea(Area a) { 
+		ArrayList<Point2D.Double> pointList = new ArrayList<Point2D.Double>();
+	    double[] coords = new double[6];
+	    int type;
+	    PathIterator it = a.getPathIterator(null);
+	    while (!it.isDone()) {
+	        type = it.currentSegment(coords);
+	        if (type == it.SEG_MOVETO) {
+	            pointList.clear();
+	            pointList.add(new Point2D.Double(coords[0], coords[1]));
+	        } else if (type == it.SEG_LINETO) {
+	            pointList.add(new Point2D.Double(coords[0], coords[1]));
+	        } else if (type == it.SEG_CLOSE) {
+	        	pointList.add(pointList.get(0));
+	        }
+	        it.next();
+	    }
+	    return Math.abs(polyArea(pointList));
+	}
+
+	private static double polyArea(ArrayList<Double> pointList) {
+		double sum = 0;
+		for (int i = 0; i < pointList.size() -1; i++)
+		{
+		    sum += pointList.get(i).x * pointList.get(i+1).y - pointList.get(i).y * pointList.get(i + 1).x;
+		}
+		return sum / 2;
+	}
+}

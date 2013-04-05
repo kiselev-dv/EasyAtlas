@@ -1,0 +1,8 @@
+package ru.osm.dkiselev.atlasgenerator;
+
+public class BBOX {
+	private double top;
+	private double bottom;
+	private double left;
+	private double right;
+}

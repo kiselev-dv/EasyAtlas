@@ -1,0 +1,23 @@
+package ru.osm.dkiselev.atlasgenerator;
+
+import static java.lang.Math.cos;
+import static java.lang.Math.PI;
+
+public class Calculator {
+	
+	private static final int R = 6378137;
+
+	public static Point addOffset(Point p, double de, double dn)
+	{
+		//Position, decimal degrees
+		double lat = p.getLat();
+		double lon = p.getLon();
+
+		//Coordinate offsets in radians
+		double dLat = dn / R;
+		double dLon = de/( R * cos( PI * lat / 180));
+
+		 //OffsetPosition, decimal degrees
+		return new Point(lon + dLon * 180/PI, lat + dLat * 180/PI);
+	}
+}

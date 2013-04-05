@@ -1,0 +1,154 @@
+package ru.osm.dkiselev.atlasgenerator;
+
+import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import org.odftoolkit.odfdom.dom.element.office.OfficeTextElement;
+import org.odftoolkit.simple.TextDocument;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
+public class TemplateParser {
+	
+	private static final double INCHES_TO_CM = 2.54;
+	
+	private static final String FRAME_NAME_ATTR_NAME = "draw:name";
+	private static final String FRAME_ELEMENT_NAME = "draw:frame";
+	private static final String MAP_FRAME = "map_frame";
+	
+	private static final Logger logger = Logger.getLogger(TemplateParser.class.getName());
+	
+	private int scaleFactor;
+	private int DPI = 300;
+	private File templateFile;
+	
+	private double widthMM;
+	private double heightMM;
+	
+	private double scaledMapWidthM;
+	private double scaledMapHeightM;
+	
+	private int widthPX;  
+	private int heightPX;
+	
+	public static class SizeAttrParseError extends Exception
+	{
+		private static final long serialVersionUID = -434643189709162542L;
+
+		public SizeAttrParseError(String string) {
+			super(string);
+		}
+	}
+	
+	public TemplateParser(int scaleFactor, File templateFile) {
+		super();
+		this.scaleFactor = scaleFactor;
+		this.templateFile = templateFile;
+	}
+
+	public void parse() throws Exception {
+			
+			TextDocument template = TextDocument.loadDocument(templateFile);
+			OfficeTextElement contentRoot = template.getContentRoot();
+			
+			NodeList frames = contentRoot.getElementsByTagName(FRAME_ELEMENT_NAME);
+			
+			Map<String, Node> frameByName = new HashMap<String, Node>();
+			
+			for(int i = 0; i < frames.getLength(); i++)
+			{
+				Node item = frames.item(i);
+				String name = item.getAttributes().getNamedItem(FRAME_NAME_ATTR_NAME).getTextContent();
+				
+				frameByName.put(name, item);
+			}
+			
+			Node mapFrame = frameByName.get(MAP_FRAME);
+			if(mapFrame == null) {
+				logger.log(Level.SEVERE, "Fframe with name {0} not found in document.", MAP_FRAME);
+				return;
+			}
+			
+			String width = mapFrame.getAttributes().getNamedItem("svg:width").getTextContent();
+			String height = mapFrame.getAttributes().getNamedItem("svg:height").getTextContent();
+			
+			double widthMM = parseSize(width);
+			double heightMM = parseSize(height);
+			
+			double scaledMapWidthM = widthMM * scaleFactor / 1000;
+			double scaledMapHeightM = heightMM * scaleFactor / 1000;
+			
+			int widthPX = new Double(DPI / INCHES_TO_CM * widthMM / 10).intValue();  
+			int heightPX = new Double(DPI / INCHES_TO_CM * heightMM / 10).intValue();  
+
+			logger.log(Level.INFO, "Map frame width: {0}mm, height: {1}mm", new Object[]{widthMM, heightMM});
+			logger.log(Level.INFO, "Scale: 1/{0}", scaleFactor);
+			logger.log(Level.INFO, "Map scaled width: {0}m, height: {1}m", new Object[]{scaledMapWidthM, scaledMapHeightM});
+			logger.log(Level.INFO, "Map width: {0}px, height: {1}px", new Object[]{widthPX, heightPX});
+	
+			
+	}
+
+	public static double parseSize(String s) throws SizeAttrParseError {
+		
+		if (s == null) {
+			throw new SizeAttrParseError("Attribute string is null");
+		}
+		
+		if(s.endsWith("cm")) {
+			return Double.valueOf(s.substring(0, s.length() - 2)) * 10; 
+		}
+		if(s.endsWith("mm")) {
+			return Double.valueOf(s.substring(0, s.length() - 2)); 
+		}
+		if(s.endsWith("m")) {
+			return Double.valueOf(s.substring(0, s.length() - 1)) * 1000; 
+		}
+		
+		throw new SizeAttrParseError("Can't find dimensions of " + s);
+	}
+
+	public int getScaleFactor() {
+		return scaleFactor;
+	}
+
+	public void setScaleFactor(int scaleFactor) {
+		this.scaleFactor = scaleFactor;
+	}
+
+	public int getDPI() {
+		return DPI;
+	}
+
+	public void setDPI(int dPI) {
+		DPI = dPI;
+	}
+
+	public double getWidthMM() {
+		return widthMM;
+	}
+
+	public double getHeightMM() {
+		return heightMM;
+	}
+
+	public double getScaledMapWidthM() {
+		return scaledMapWidthM;
+	}
+
+	public double getScaledMapHeightM() {
+		return scaledMapHeightM;
+	}
+
+	public int getWidthPX() {
+		return widthPX;
+	}
+
+	public int getHeightPX() {
+		return heightPX;
+	}
+	
+}

@@ -1,0 +1,54 @@
+package ru.osm.dkiselev.atlasgenerator;
+
+import java.awt.geom.Area;
+
+public class GridGenerator {
+	
+	private Area coverage;
+	private BBOX[][] grid;
+	private BBOX coverageBox;
+	
+	private double bboxWidthDeg;
+	private double bboxHeightDeg;
+	
+	public Area getCoverage() {
+		return coverage;
+	}
+	
+	public void setCoverage(Area coverage) {
+		this.coverage = coverage;
+	}
+	
+	public BBOX[][] getGrid() {
+		return grid;
+	}
+	
+	public void setGrid(BBOX[][] grid) {
+		this.grid = grid;
+	}
+	
+	public BBOX getCoverageBox() {
+		return coverageBox;
+	}
+	
+	public void setCoverageBox(BBOX coverageBox) {
+		this.coverageBox = coverageBox;
+	}
+	
+	public double getBboxWidthDeg() {
+		return bboxWidthDeg;
+	}
+	
+	public void setBboxWidthDeg(double bboxWidthDeg) {
+		this.bboxWidthDeg = bboxWidthDeg;
+	}
+	
+	public double getBboxHeightDeg() {
+		return bboxHeightDeg;
+	}
+	
+	public void setBboxHeightDeg(double bboxHeightDeg) {
+		this.bboxHeightDeg = bboxHeightDeg;
+	}
+	
+}

@@ -1,0 +1,7 @@
+package ru.osm.dkiselev.atlasgenerator;
+
+public class ODFGenerator {
+	public static void main(String[] args) {
+		new TemplateParser(Integer.valueOf(args[1]), new File(args[0] + "/map_page.ott"))
+	}
+}
