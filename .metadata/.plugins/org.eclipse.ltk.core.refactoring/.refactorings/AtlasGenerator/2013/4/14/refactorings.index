@@ -59,3 +59,8 @@
 1364996685405	Rename local variable 'node'
 1364998358111	Extract method 'setParagrafValue'
 1365172479580	Rename type 'TemplateParser'
+1365189682622	Rename field 'OVERLAP_PECENTS'
+1365189779571	Extract local variable 'overlapWidthM'
+1365189820537	Extract local variable 'owerlapHeightM'
+1365190344193	Extract local variable 'bbox'
+1365191518858	Rename local variable 'offsetted'

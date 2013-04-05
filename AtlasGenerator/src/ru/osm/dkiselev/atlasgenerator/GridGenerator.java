@@ -9,9 +9,9 @@ import java.util.logging.Logger;
 
 public class GridGenerator {
 	
-	private static final int COVERED_UNTIL_DROP_PERCENTS = 10;
+	private static final int COVERED_UNTIL_DROP_PERCENTS = 5;
 	private static final int COVERED_UNTIL_RELLOCATE_PERCENTS = 40;
-	private static final int OVERLAP_PECENTS = 10;
+	private static final int OVERLAP_PERCENTS = 10;
 	
 	private Area coverage = null;
 	private GridCell[][] grid = null;
@@ -31,19 +31,26 @@ public class GridGenerator {
 	public void generate(double bboxWidthM, double bboxHeightM)
 	{
 		Rectangle2D coverageBox = coverage.getBounds2D();
+		logger.log(Level.INFO, "Coverage bbox: base_point=({0},{1}) width={2}, height={3}", 
+				new Object[]{coverageBox.getX(), coverageBox.getY(), coverageBox.getWidth(), coverageBox.getHeight()});
+		
+		double owerlapWidthM = bboxWidthM * OVERLAP_PERCENTS / 100;
+		double owerlapHeightM = bboxHeightM * OVERLAP_PERCENTS / 100;
+
 		Point basePoint = new Point(coverageBox.getMinX(), coverageBox.getMinY());
+		basePoint = Calculator.addOffset(basePoint, -owerlapWidthM, -owerlapHeightM);
 		
 		int columns = 0;
 		Point p = basePoint;
 		do {
-			p = Calculator.addOffset(p, bboxWidthM, 0);
+			p = Calculator.addOffset(p, bboxWidthM - owerlapWidthM, 0);
 			columns++;
 		}while(p.getLon() < coverageBox.getMaxX() && columns < 100);
 
 		int rows = 0;
 		p = basePoint;
 		do {
-			p = Calculator.addOffset(p, 0, bboxHeightM);
+			p = Calculator.addOffset(p, 0, bboxHeightM - owerlapHeightM);
 			rows++;
 		}while(p.getLat() < coverageBox.getMaxY() && rows < 100);
 		
@@ -60,18 +67,27 @@ public class GridGenerator {
 		for(int j = 0; j < rows; j++) {
 			for(int i = 0; i < columns; i++) {
 				
-				Point offsetted = Calculator.addOffset(p, bboxWidthM, bboxHeightM);
+				Point topRight = Calculator.addOffset(p, bboxWidthM, bboxHeightM);
+				//Point botLeft = Calculator.addOffset(p, owerlapWidthM, owerlapHeightM);
 				
-				GridCell gridCell = new GridCell(new BBOX(offsetted.getLat(), p.getLat(), p.getLon(), offsetted.getLon()));
+				GridCell gridCell = new GridCell(new BBOX(topRight.getLat(), p.getLat(), 
+						p.getLon(), topRight.getLon()));
 				gridCell.setI(i);
 				gridCell.setJ(j);
 				
 				grid[i][j] = gridCell;
 				
-				p = Calculator.addOffset(p, bboxWidthM, 0);
+				p = Calculator.addOffset(p, bboxWidthM - owerlapWidthM, 0);
 			}
 			p.setLon(basePoint.getLon());
-			p = Calculator.addOffset(p, 0, bboxHeightM);
+			p = Calculator.addOffset(p, 0, bboxHeightM - owerlapHeightM);
+		}
+		
+		for(int j = 0; j < rows; j++) {
+			for(int i = 0; i < columns; i++) {
+				BBOX bbox = grid[i][j].getBbox();
+				System.out.println(i + "\t" + j + "\t(" + bbox.toString() + ")");
+			}
 		}
 		
 		for(int j = 0; j < rows; j++) {

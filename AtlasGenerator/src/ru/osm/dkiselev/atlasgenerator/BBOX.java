@@ -39,4 +39,9 @@ public class BBOX {
 		right += dx;
 	}
 	
+	@Override
+	public String toString() {
+		return String.format("%.6f %.6f %.6f %.6f", top, bottom, left, right);
+	}
+	
 }
