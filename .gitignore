@@ -2,3 +2,6 @@
 *.odt
 *.pdf
 pages
+*~
+.metadata
+

@@ -1,5 +1,7 @@
 package ru.osm.dkiselev.atlasgenerator;
 
+import ru.osm.dkiselev.atlasgenerator.util.BBOX;
+
 public class GridCell {
 	
 	private BBOX bbox;

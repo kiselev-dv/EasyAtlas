@@ -10,5 +10,7 @@
 	<classpathentry kind="lib" path="libs/commons-io-2.4.jar"/>
 	<classpathentry kind="lib" path="libs/odfdom-java-0.8.8-incubating.jar"/>
 	<classpathentry kind="lib" path="libs/simple-odf-0.7-incubating.jar"/>
+	<classpathentry kind="lib" path="libs/ini4j-0.5.2.jar"/>
+	<classpathentry kind="lib" path="libs/jcommander-1.30.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

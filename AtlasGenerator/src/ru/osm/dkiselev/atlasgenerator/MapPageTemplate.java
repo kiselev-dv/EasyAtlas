@@ -11,10 +11,16 @@ import org.odftoolkit.simple.TextDocument;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import ru.osm.dkiselev.atlasgenerator.configs.Config;
+
 public class MapPageTemplate {
 
-	private static final double INCHES_TO_CM = 2.54;
+	private static final String TEMPLATE_FILE_OPTION_NAME = "TemplateFile";
 
+	public static final String MAP_PAGE_TEMPLATE_SECTION_NAME = "MapPages";
+
+	private static final String SCALE_OPTION_NAME = "Scale";
+	
 	private static final String FRAME_NAME_ATTR_NAME = "draw:name";
 	private static final String FRAME_ELEMENT_NAME = "draw:frame";
 	
@@ -25,13 +31,12 @@ public class MapPageTemplate {
 	public static final String BOTTOM_PAGE_REF_FRAME = "bottom-page-ref";
 	public static final String LEFT_PAGE_REF_FRAME = "left-page-ref";
 	public static final String RIGHT_PAGE_REF_FRAME = "right-page-ref";
-	
+
 	
 	private static final Logger logger = Logger.getLogger(MapPageTemplate.class
 			.getName());
 
 	private int scaleFactor;
-	private int DPI = 300;
 	private File templateFile;
 
 	private double widthMM;
@@ -39,9 +44,6 @@ public class MapPageTemplate {
 
 	private double scaledMapWidthM;
 	private double scaledMapHeightM;
-
-	private int widthPX;
-	private int heightPX;
 	
 	private TextDocument document = null; 
 	private Map<String, Node> frameByName = null; 
@@ -54,8 +56,13 @@ public class MapPageTemplate {
 		}
 	}
 
-	public MapPageTemplate(int scaleFactor, File templateFile) {
+	public MapPageTemplate() {
 		super();
+		this.scaleFactor = Config.get(MAP_PAGE_TEMPLATE_SECTION_NAME, SCALE_OPTION_NAME, Integer.class);
+		this.templateFile = new File(Config.get(MAP_PAGE_TEMPLATE_SECTION_NAME, TEMPLATE_FILE_OPTION_NAME));
+	}
+	
+	private MapPageTemplate(int scaleFactor, File templateFile) {
 		this.scaleFactor = scaleFactor;
 		this.templateFile = templateFile;
 	}
@@ -82,13 +89,9 @@ public class MapPageTemplate {
 		scaledMapWidthM = widthMM * scaleFactor / 1000;
 		scaledMapHeightM = heightMM * scaleFactor / 1000;
 		
-		widthPX = new Double(DPI / INCHES_TO_CM * widthMM / 10).intValue();  
-		heightPX = new Double(DPI / INCHES_TO_CM * heightMM / 10).intValue();  
-
 		logger.log(Level.INFO, "Map frame width: {0}mm, height: {1}mm", new Object[]{widthMM, heightMM});
 		logger.log(Level.INFO, "Scale: 1/{0}", scaleFactor);
 		logger.log(Level.INFO, "Map scaled width: {0}m, height: {1}m", new Object[]{scaledMapWidthM, scaledMapHeightM});
-		logger.log(Level.INFO, "Map width: {0}px, height: {1}px at {2} dpi.", new Object[]{widthPX, heightPX, DPI});
 	}
 
 	private void loadFrames() throws Exception {
@@ -116,9 +119,6 @@ public class MapPageTemplate {
 		
 		n.scaledMapWidthM = scaledMapWidthM;
 		n.scaledMapHeightM = scaledMapHeightM;
-		
-		n.widthPX = widthPX;  
-		n.heightPX = heightPX;
 		
 		return n;
 	}
@@ -150,14 +150,6 @@ public class MapPageTemplate {
 		this.scaleFactor = scaleFactor;
 	}
 
-	public int getDPI() {
-		return DPI;
-	}
-
-	public void setDPI(int dPI) {
-		DPI = dPI;
-	}
-
 	public double getWidthMM() {
 		return widthMM;
 	}
@@ -172,14 +164,6 @@ public class MapPageTemplate {
 
 	public double getScaledMapHeightM() {
 		return scaledMapHeightM;
-	}
-
-	public int getWidthPX() {
-		return widthPX;
-	}
-
-	public int getHeightPX() {
-		return heightPX;
 	}
 
 	public TextDocument getDocument() {
