@@ -28,14 +28,11 @@ Use them as template, to make you own map style.
 Fourth: generate atlas.
 -----------------------
 
-    java -jar AtlasGenerator.jar dir_with_templates_path scale_divisor coverage_poly_path
+    java -jar AtlasGenerator.jar --config default.conf
     
-It's very very not final version yet. I'll replace some of arguments with config file.
+See default.conf comments for more information.
 
-coverage.poly - can be generated with JOSM. 
-
-template dir - must contains map-page.ott file. - It's open document template, with some frames. Only map_frame 
-(frame with such name) is required. 
+You can owervrite any of parameter from comand line, using -oSection.Parameter=value. You can skip section, then Common section will be used.
 
 AtlasGenerator.jar will create pages subdir with number of map-page#.odt files, with filled page numbers, 
 page-references and page images.
