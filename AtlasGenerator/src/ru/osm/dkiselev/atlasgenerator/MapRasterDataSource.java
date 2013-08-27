@@ -2,8 +2,13 @@ package ru.osm.dkiselev.atlasgenerator;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLEncoder;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -74,17 +79,38 @@ public class MapRasterDataSource {
 		sb.append(bbox.getTop());
 		
 		sb.append("&dpi=").append(dpi);
+		
+		Map<String, String> options = loadWMSOptions();
+		for(Entry<String, String> entry : options.entrySet())
+		{
+			try {
+				sb.append("&").append(URLEncoder.encode(entry.getKey(), "utf-8")).append("=").append(URLEncoder.encode(entry.getValue(), "utf-8"));
+			} catch (UnsupportedEncodingException e) {
+				e.printStackTrace();
+			}
+		}
 
-		sb.append("&service=WMS");
-		sb.append("&request=GetMap");
-		sb.append("&version=1.1.1");
-		sb.append("&layers=bw");
-		sb.append("&format=image/png");
 		sb.append("&height=").append(heightPX);
 		sb.append("&width=").append(widthPX);
-		sb.append("&srs=EPSG:3857");
 		
 		return sb.toString();
+	}
+
+	
+	private Map<String, String> loadWMSOptions() {
+		
+		Map<String, String> opts = new HashMap<String, String>();
+		
+		opts.put("service", "WMS");
+		opts.put("request", "GetMap");
+		opts.put("version", "1.1.1");
+		opts.put("layers", "");
+		opts.put("format", "image/png");
+		opts.put("srs", "EPSG:3857");
+		
+		opts.putAll(Config.getMapByPrefix("MapRasterSource", "WMSOpt_"));
+		
+		return opts;
 	}
 	
 	
