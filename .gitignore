@@ -4,4 +4,7 @@
 pages
 *~
 .metadata
-
+.idea/
+AtlasGenerator/bin/
+AtlasGenerator/AtlasGenerator.iml
+AtlasGenerator.jar
