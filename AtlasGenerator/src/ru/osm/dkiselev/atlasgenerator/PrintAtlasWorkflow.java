@@ -21,6 +21,8 @@ import ru.osm.dkiselev.atlasgenerator.configs.Config;
 import ru.osm.dkiselev.atlasgenerator.configs.Config.ConfigurationException;
 import ru.osm.dkiselev.atlasgenerator.configs.Options;
 
+import com.beust.jcommander.ParameterException;
+
 @SuppressWarnings("deprecation")
 public class PrintAtlasWorkflow implements Workflow {
 	
@@ -34,6 +36,8 @@ public class PrintAtlasWorkflow implements Workflow {
 			
 		} catch (ConfigurationException e) {
 			Options.printUsage();
+		} catch (ParameterException e) {
+			System.out.println(e.getMessage());
 		}
 	}
 	
