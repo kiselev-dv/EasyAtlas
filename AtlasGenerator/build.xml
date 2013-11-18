@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project AtlasGenerator">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar destfile="../AtlasGenerator.jar" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="ru.osm.dkiselev.atlasgenerator.PrintAtlasWorkflow"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <fileset dir="../AtlasGenerator/bin"/>
+            <zipfileset excludes="META-INF/*.SF" src="../AtlasGenerator/libs/resolver.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../AtlasGenerator/libs/serializer.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../AtlasGenerator/libs/xercesImpl.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../AtlasGenerator/libs/xml-apis.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../AtlasGenerator/libs/commons-io-2.4.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../AtlasGenerator/libs/odfdom-java-0.8.8-incubating.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../AtlasGenerator/libs/simple-odf-0.7-incubating.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../AtlasGenerator/libs/ini4j-0.5.2.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../AtlasGenerator/libs/jcommander-1.30.jar"/>
+        </jar>
+    </target>
+</project>

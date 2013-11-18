@@ -1,13 +1,13 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" version="1.8.0-Lisboa">
+<qgis projectname="" version="2.0.1-Dufour">
     <title></title>
     <mapcanvas>
         <units>meters</units>
         <extent>
-            <xmin>2060124.085101</xmin>
-            <ymin>5229309.864728</ymin>
-            <xmax>2060919.951766</xmax>
-            <ymax>5229637.418894</ymax>
+            <xmin>13912736.06941237859427929</xmin>
+            <ymin>1259822.21530930744484067</ymin>
+            <xmax>13913405.41430152021348476</xmax>
+            <ymax>1260208.93835258390754461</ymax>
         </extent>
         <projections>1</projections>
         <destinationsrs>
@@ -91,29 +91,64 @@
         </legendlayer>
     </legend>
     <Composer title="Макет 2" visible="0">
-        <ComposerMap keepLayerSet="false" id="0" previewMode="Render" drawCanvasItems="true">
-            <Extent ymin="42.4451" xmin="18.4973" ymax="42.4719" xmax="18.5359"/>
-            <LayerSet/>
-            <Grid gridStyle="0" crossLength="3" penColorRed="0" penColorBlue="0" intervalX="0" offsetX="0" intervalY="0" offsetY="0" show="0" penWidth="0" penColorGreen="0">
-                <Annotation direction="0" precision="3" position="1" frameDistance="1" show="0" font="Ubuntu,11,-1,5,50,0,0,0,0,0"/>
-            </Grid>
-            <ComposerItem width="290.837" x="3.34295" y="1.91026" rotation="0" height="202.01" frame="true" outlineWidth="0.3" zValue="1" lastValidViewScaleFactor="2.09396" id="" positionLock="false">
-                <FrameColor alpha="255" red="0" blue="0" green="0"/>
-                <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
-            </ComposerItem>
-        </ComposerMap>
-        <Composition printResolution="300" paperWidth="297" snapGridOffsetX="0" snapGridResolution="0" snapGridOffsetY="0" snapping="0" paperHeight="210" printAsRaster="1"/>
+        <Composition printResolution="300" paperWidth="297" snapGridOffsetX="0" snapGridResolution="0" snapGridOffsetY="0" alignmentSnap="1" snapping="0" numPages="1" paperHeight="210" alignmentSnapTolerance="2" printAsRaster="1">
+            <ComposerMap keepLayerSet="false" overviewFrameMap="-1" id="0" previewMode="Render" drawCanvasItems="true">
+                <overviewFrame overviewBlendMode="0" overviewFrameMap="-1" overviewInverted="false">
+                    <symbol alpha="0.3" type="fill" name="">
+                        <layer pass="0" class="SimpleFill" locked="0">
+                            <prop k="border_width_unit" v="MM"/>
+                            <prop k="color" v="255,0,0,255"/>
+                            <prop k="color_border" v="0,0,0,255"/>
+                            <prop k="offset" v="0,0"/>
+                            <prop k="offset_unit" v="MM"/>
+                            <prop k="style" v="solid"/>
+                            <prop k="style_border" v="no"/>
+                            <prop k="width_border" v="0.26"/>
+                        </layer>
+                    </symbol>
+                </overviewFrame>
+                <Extent ymin="42.4451" xmin="18.4973" ymax="42.4719" xmax="18.5359"/>
+                <LayerSet/>
+                <Grid gridStyle="0" crossLength="3" intervalX="0" offsetX="0" intervalY="0" offsetY="0" gridFrameStyle="0" gridFrameWidth="2" gridBlendMode="0" show="0">
+                    <symbol alpha="1" type="line" name="">
+                        <layer pass="0" class="SimpleLine" locked="0">
+                            <prop k="capstyle" v="square"/>
+                            <prop k="color" v="0,0,0,255"/>
+                            <prop k="customdash" v="5;2"/>
+                            <prop k="customdash_unit" v="MM"/>
+                            <prop k="joinstyle" v="bevel"/>
+                            <prop k="offset" v="0"/>
+                            <prop k="offset_unit" v="MM"/>
+                            <prop k="penstyle" v="solid"/>
+                            <prop k="use_custom_dash" v="0"/>
+                            <prop k="width" v="0"/>
+                            <prop k="width_unit" v="MM"/>
+                        </layer>
+                    </symbol>
+                    <Annotation rightDirection="0" bottomDirection="0" format="0" topPosition="1" precision="3" leftDirection="0" rightPosition="1" bottomPosition="1" frameDistance="1" show="0" font="Ubuntu,11,-1,5,50,0,0,0,0,0" leftPosition="1" topDirection="0">
+                        <fontColor red="0" blue="0" green="0"/>
+                    </Annotation>
+                </Grid>
+                <ComposerItem width="290.837" x="3.34295" transparency="0" y="1.91026" rotation="0" height="202.01" positionMode="0" frame="true" outlineWidth="0.3" zValue="1" lastValidViewScaleFactor="2.09396" uuid="{e1939118-a15e-4783-a3df-f293e3badb43}" id="" background="false" blendMode="0" positionLock="false">
+                    <FrameColor alpha="255" red="0" blue="0" green="0"/>
+                    <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+                </ComposerItem>
+            </ComposerMap>
+        </Composition>
     </Composer>
     <projectlayers layercount="13">
-        <maplayer minimumScale="0" maximumScale="1e+08" geometry="Point" type="vector" hasScaleBasedVisibilityFlag="0">
+        <maplayer minimumScale="0" maximumScale="1e+08" minLabelScale="1" maxLabelScale="1e+08" geometry="Point" type="vector" hasScaleBasedVisibilityFlag="0" scaleBasedLabelVisibilityFlag="0">
             <id>addr_points20130331194441016</id>
-            <datasource>dbname='qgis-bw' host=localhost port=5432 user='dkiselev' password='123' sslmode=disable key='tid' srid=4326 type=POINT table="addr_points" (geom) sql=</datasource>
+            <datasource>dbname='tacloban' host=localhost port=5432 user='dkiselev' password='123' sslmode=disable key='tid' srid=4326 type=POINT table="addr_points" (geom) sql=</datasource>
             <title></title>
             <abstract></abstract>
+            <keywordList>
+                <value></value>
+            </keywordList>
             <layername>addr_points</layername>
             <srs>
                 <spatialrefsys>
-                    <proj4>+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs</proj4>
+                    <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
                     <srsid>3452</srsid>
                     <srid>4326</srid>
                     <authid>EPSG:4326</authid>
@@ -123,26 +158,34 @@
                     <geographicflag>true</geographicflag>
                 </spatialrefsys>
             </srs>
-            <transparencyLevelInt>255</transparencyLevelInt>
             <provider encoding="System">postgres</provider>
+            <previewExpression></previewExpression>
             <vectorjoins/>
             <renderer-v2 symbollevels="0" type="singleSymbol">
                 <symbols>
-                    <symbol outputUnit="MM" alpha="1" type="marker" name="0">
+                    <symbol alpha="1" type="marker" name="0">
                         <layer pass="0" class="SimpleMarker" locked="0">
                             <prop k="angle" v="0"/>
                             <prop k="color" v="243,4,0,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
                             <prop k="name" v="circle"/>
                             <prop k="offset" v="0,0"/>
+                            <prop k="offset_unit" v="MM"/>
+                            <prop k="outline_width" v="0"/>
+                            <prop k="outline_width_unit" v="MM"/>
+                            <prop k="scale_method" v="area"/>
                             <prop k="size" v="0"/>
+                            <prop k="size_unit" v="MM"/>
                         </layer>
                     </symbol>
                 </symbols>
                 <rotation field=""/>
-                <sizescale field=""/>
+                <sizescale field="" scalemethod="area"/>
             </renderer-v2>
             <customproperties/>
+            <blendMode>0</blendMode>
+            <featureBlendMode>0</featureBlendMode>
+            <layerTransparency>0</layerTransparency>
             <displayfield>nbr</displayfield>
             <label>1</label>
             <labelfield>nbr</labelfield>
@@ -167,25 +210,31 @@
                 <selectedonly on=""/>
             </labelattributes>
             <edittypes>
-                <edittype type="0" name="angle"/>
-                <edittype type="0" name="building"/>
-                <edittype type="0" name="nbr"/>
-                <edittype type="0" name="street"/>
+                <edittype labelontop="0" editable="1" type="0" name="angle"/>
+                <edittype labelontop="0" editable="1" type="0" name="building"/>
+                <edittype labelontop="0" editable="1" type="0" name="nbr"/>
+                <edittype labelontop="0" editable="1" type="0" name="street"/>
             </edittypes>
             <editform>.</editform>
             <editforminit></editforminit>
             <annotationform>.</annotationform>
+            <editorlayout>generatedlayout</editorlayout>
+            <excludeAttributesWMS/>
+            <excludeAttributesWFS/>
             <attributeactions/>
         </maplayer>
-        <maplayer minimumScale="0" maximumScale="1e+08" geometry="Polygon" type="vector" hasScaleBasedVisibilityFlag="0">
+        <maplayer minimumScale="0" maximumScale="1e+08" minLabelScale="1" maxLabelScale="1e+08" geometry="Polygon" type="vector" hasScaleBasedVisibilityFlag="0" scaleBasedLabelVisibilityFlag="0">
             <id>amenity_polygons20130331194441143</id>
-            <datasource>dbname='qgis-bw' host=localhost port=5432 user='dkiselev' password='123' sslmode=disable key='tid' srid=4326 type=MULTIPOLYGON table="amenity_polygons" (geom) sql=</datasource>
+            <datasource>dbname='tacloban' host=localhost port=5432 user='dkiselev' password='123' sslmode=disable key='tid' srid=4326 type=MULTIPOLYGON table="amenity_polygons" (geom) sql=</datasource>
             <title></title>
             <abstract></abstract>
+            <keywordList>
+                <value></value>
+            </keywordList>
             <layername>amenity_polygons</layername>
             <srs>
                 <spatialrefsys>
-                    <proj4>+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs</proj4>
+                    <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
                     <srsid>3452</srsid>
                     <srid>4326</srid>
                     <authid>EPSG:4326</authid>
@@ -195,45 +244,57 @@
                     <geographicflag>true</geographicflag>
                 </spatialrefsys>
             </srs>
-            <transparencyLevelInt>255</transparencyLevelInt>
             <provider encoding="System">postgres</provider>
+            <previewExpression></previewExpression>
             <vectorjoins/>
             <renderer-v2 symbollevels="0" type="RuleRenderer">
                 <rules>
                     <rule filter="&quot;type&quot; = 'parking'" symbol="0" label="parking"/>
                 </rules>
                 <symbols>
-                    <symbol outputUnit="MM" alpha="1" type="fill" name="0">
+                    <symbol alpha="1" type="fill" name="0">
                         <layer pass="0" class="PointPatternFill" locked="0">
                             <prop k="displacement_x" v="0"/>
+                            <prop k="displacement_x_unit" v="MM"/>
                             <prop k="displacement_y" v="0"/>
+                            <prop k="displacement_y_unit" v="MM"/>
                             <prop k="distance_x" v="8"/>
+                            <prop k="distance_x_unit" v="MM"/>
                             <prop k="distance_y" v="8"/>
+                            <prop k="distance_y_unit" v="MM"/>
+                            <symbol alpha="1" type="marker" name="@0@0">
+                                <layer pass="0" class="FontMarker" locked="0">
+                                    <prop k="angle" v="0"/>
+                                    <prop k="chr" v="P"/>
+                                    <prop k="color" v="154,154,154,255"/>
+                                    <prop k="font" v="DejaVu Sans"/>
+                                    <prop k="offset" v="0,0"/>
+                                    <prop k="offset_unit" v="MM"/>
+                                    <prop k="size" v="4.23333"/>
+                                    <prop k="size_unit" v="MM"/>
+                                </layer>
+                            </symbol>
                         </layer>
                         <layer pass="0" class="SimpleLine" locked="0">
                             <prop k="capstyle" v="square"/>
                             <prop k="color" v="0,0,0,255"/>
                             <prop k="customdash" v="5;2"/>
+                            <prop k="customdash_unit" v="MM"/>
                             <prop k="joinstyle" v="bevel"/>
                             <prop k="offset" v="0"/>
+                            <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="solid"/>
                             <prop k="use_custom_dash" v="0"/>
                             <prop k="width" v="0.05"/>
-                        </layer>
-                    </symbol>
-                    <symbol outputUnit="MM" alpha="1" type="marker" name="@0@0">
-                        <layer pass="0" class="FontMarker" locked="0">
-                            <prop k="angle" v="0"/>
-                            <prop k="chr" v="P"/>
-                            <prop k="color" v="154,154,154,255"/>
-                            <prop k="font" v="DejaVu Sans"/>
-                            <prop k="offset" v="0,0"/>
-                            <prop k="size" v="4.23333"/>
+                            <prop k="width_unit" v="MM"/>
                         </layer>
                     </symbol>
                 </symbols>
             </renderer-v2>
             <customproperties/>
+            <blendMode>0</blendMode>
+            <featureBlendMode>0</featureBlendMode>
+            <layerTransparency>0</layerTransparency>
             <displayfield>name</displayfield>
             <label>0</label>
             <labelattributes>
@@ -257,25 +318,31 @@
                 <selectedonly on=""/>
             </labelattributes>
             <edittypes>
-                <edittype type="0" name="building"/>
-                <edittype type="0" name="has_point_nsd"/>
-                <edittype type="0" name="name"/>
-                <edittype type="0" name="type"/>
+                <edittype labelontop="0" editable="1" type="0" name="building"/>
+                <edittype labelontop="0" editable="1" type="0" name="has_point_nsd"/>
+                <edittype labelontop="0" editable="1" type="0" name="name"/>
+                <edittype labelontop="0" editable="1" type="0" name="type"/>
             </edittypes>
             <editform>.</editform>
             <editforminit></editforminit>
             <annotationform>.</annotationform>
+            <editorlayout>generatedlayout</editorlayout>
+            <excludeAttributesWMS/>
+            <excludeAttributesWFS/>
             <attributeactions/>
         </maplayer>
-        <maplayer minimumScale="0" maximumScale="1e+08" geometry="Line" type="vector" hasScaleBasedVisibilityFlag="0">
+        <maplayer minimumScale="0" maximumScale="1e+08" minLabelScale="1" maxLabelScale="1e+08" geometry="Line" type="vector" hasScaleBasedVisibilityFlag="0" scaleBasedLabelVisibilityFlag="0">
             <id>barier_line20130401110211137</id>
-            <datasource>dbname='qgis-bw' host=localhost port=5432 user='dkiselev' password='123' sslmode=disable key='tid' srid=4326 type=LINESTRING table="barier_line" (geom) sql=</datasource>
+            <datasource>dbname='tacloban' host=localhost port=5432 user='dkiselev' password='123' sslmode=disable key='tid' srid=4326 type=LINESTRING table="barier_line" (geom) sql=</datasource>
             <title></title>
             <abstract></abstract>
+            <keywordList>
+                <value></value>
+            </keywordList>
             <layername>barier_line</layername>
             <srs>
                 <spatialrefsys>
-                    <proj4>+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs</proj4>
+                    <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
                     <srsid>3452</srsid>
                     <srid>4326</srid>
                     <authid>EPSG:4326</authid>
@@ -285,8 +352,8 @@
                     <geographicflag>true</geographicflag>
                 </spatialrefsys>
             </srs>
-            <transparencyLevelInt>255</transparencyLevelInt>
             <provider encoding="System">postgres</provider>
+            <previewExpression></previewExpression>
             <vectorjoins/>
             <renderer-v2 symbollevels="0" type="RuleRenderer">
                 <rules>
@@ -294,73 +361,89 @@
                     <rule symbol="1"/>
                 </rules>
                 <symbols>
-                    <symbol outputUnit="MM" alpha="1" type="line" name="0">
+                    <symbol alpha="1" type="line" name="0">
                         <layer pass="0" class="MarkerLine" locked="0">
                             <prop k="interval" v="5"/>
+                            <prop k="interval_unit" v="MM"/>
                             <prop k="offset" v="0"/>
+                            <prop k="offset_unit" v="MM"/>
                             <prop k="placement" v="interval"/>
                             <prop k="rotate" v="1"/>
+                            <symbol alpha="1" type="marker" name="@0@0">
+                                <layer pass="0" class="SimpleMarker" locked="0">
+                                    <prop k="angle" v="0"/>
+                                    <prop k="color" v="255,0,0,255"/>
+                                    <prop k="color_border" v="0,0,0,255"/>
+                                    <prop k="name" v="line"/>
+                                    <prop k="offset" v="0,0.55"/>
+                                    <prop k="offset_unit" v="MM"/>
+                                    <prop k="outline_width" v="0"/>
+                                    <prop k="outline_width_unit" v="MM"/>
+                                    <prop k="scale_method" v="area"/>
+                                    <prop k="size" v="0.7"/>
+                                    <prop k="size_unit" v="MM"/>
+                                </layer>
+                            </symbol>
                         </layer>
                         <layer pass="0" class="SimpleLine" locked="0">
                             <prop k="capstyle" v="square"/>
                             <prop k="color" v="0,0,0,255"/>
                             <prop k="customdash" v="5;2"/>
+                            <prop k="customdash_unit" v="MM"/>
                             <prop k="joinstyle" v="bevel"/>
                             <prop k="offset" v="0"/>
+                            <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="solid"/>
                             <prop k="use_custom_dash" v="0"/>
                             <prop k="width" v="0.1"/>
+                            <prop k="width_unit" v="MM"/>
                         </layer>
                     </symbol>
-                    <symbol outputUnit="MM" alpha="1" type="line" name="1">
+                    <symbol alpha="1" type="line" name="1">
                         <layer pass="0" class="MarkerLine" locked="0">
                             <prop k="interval" v="5"/>
+                            <prop k="interval_unit" v="MM"/>
                             <prop k="offset" v="0"/>
+                            <prop k="offset_unit" v="MM"/>
                             <prop k="placement" v="interval"/>
                             <prop k="rotate" v="1"/>
+                            <symbol alpha="1" type="marker" name="@1@0">
+                                <layer pass="0" class="EllipseMarker" locked="0">
+                                    <prop k="angle" v="0"/>
+                                    <prop k="fill_color" v="0,0,0,255"/>
+                                    <prop k="offset" v="0,0"/>
+                                    <prop k="offset_unit" v="MM"/>
+                                    <prop k="outline_color" v="255,255,255,255"/>
+                                    <prop k="outline_width" v="0"/>
+                                    <prop k="outline_width_unit" v="MM"/>
+                                    <prop k="symbol_height" v="1"/>
+                                    <prop k="symbol_height_unit" v="MM"/>
+                                    <prop k="symbol_name" v="rectangle"/>
+                                    <prop k="symbol_width" v="1"/>
+                                    <prop k="symbol_width_unit" v="MM"/>
+                                </layer>
+                            </symbol>
                         </layer>
                         <layer pass="0" class="SimpleLine" locked="0">
                             <prop k="capstyle" v="square"/>
                             <prop k="color" v="0,0,0,255"/>
                             <prop k="customdash" v="5;2"/>
+                            <prop k="customdash_unit" v="MM"/>
                             <prop k="joinstyle" v="bevel"/>
                             <prop k="offset" v="0"/>
+                            <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="solid"/>
                             <prop k="use_custom_dash" v="0"/>
                             <prop k="width" v="0.1"/>
-                        </layer>
-                    </symbol>
-                    <symbol outputUnit="MM" alpha="1" type="marker" name="@0@0">
-                        <layer pass="0" class="SimpleMarker" locked="0">
-                            <prop k="angle" v="0"/>
-                            <prop k="color" v="255,0,0,255"/>
-                            <prop k="color_border" v="0,0,0,255"/>
-                            <prop k="name" v="line"/>
-                            <prop k="offset" v="0,0.55"/>
-                            <prop k="size" v="0.7"/>
-                        </layer>
-                    </symbol>
-                    <symbol outputUnit="MM" alpha="1" type="marker" name="@1@0">
-                        <layer pass="0" class="EllipseMarker" locked="0">
-                            <prop k="angle" v="0"/>
-                            <prop k="fill_color" v="0,0,0,255"/>
-                            <prop k="fill_color_field" v=""/>
-                            <prop k="height_field" v=""/>
-                            <prop k="outline_color" v="255,255,255,255"/>
-                            <prop k="outline_color_field" v=""/>
-                            <prop k="outline_width" v="0"/>
-                            <prop k="outline_width_field" v=""/>
-                            <prop k="rotation_field" v=""/>
-                            <prop k="symbol_height" v="1"/>
-                            <prop k="symbol_name" v="rectangle"/>
-                            <prop k="symbol_name_field" v=""/>
-                            <prop k="symbol_width" v="1"/>
-                            <prop k="width_field" v=""/>
+                            <prop k="width_unit" v="MM"/>
                         </layer>
                     </symbol>
                 </symbols>
             </renderer-v2>
             <customproperties/>
+            <blendMode>0</blendMode>
+            <featureBlendMode>0</featureBlendMode>
+            <layerTransparency>0</layerTransparency>
             <displayfield>name</displayfield>
             <label>0</label>
             <labelattributes>
@@ -384,23 +467,29 @@
                 <selectedonly on=""/>
             </labelattributes>
             <edittypes>
-                <edittype type="0" name="name"/>
-                <edittype type="0" name="type"/>
+                <edittype labelontop="0" editable="1" type="0" name="name"/>
+                <edittype labelontop="0" editable="1" type="0" name="type"/>
             </edittypes>
             <editform>.</editform>
             <editforminit></editforminit>
             <annotationform>.</annotationform>
+            <editorlayout>generatedlayout</editorlayout>
+            <excludeAttributesWMS/>
+            <excludeAttributesWFS/>
             <attributeactions/>
         </maplayer>
-        <maplayer minimumScale="0" maximumScale="1e+08" geometry="Point" type="vector" hasScaleBasedVisibilityFlag="0">
+        <maplayer minimumScale="0" maximumScale="1e+08" minLabelScale="1" maxLabelScale="1e+08" geometry="Point" type="vector" hasScaleBasedVisibilityFlag="0" scaleBasedLabelVisibilityFlag="0">
             <id>barier_point20130401110211156</id>
-            <datasource>dbname='qgis-bw' host=localhost port=5432 user='dkiselev' password='123' sslmode=disable key='tid' srid=4326 type=POINT table="barier_point" (geom) sql=</datasource>
+            <datasource>dbname='tacloban' host=localhost port=5432 user='dkiselev' password='123' sslmode=disable key='tid' srid=4326 type=POINT table="barier_point" (geom) sql=</datasource>
             <title></title>
             <abstract></abstract>
+            <keywordList>
+                <value></value>
+            </keywordList>
             <layername>barier_point</layername>
             <srs>
                 <spatialrefsys>
-                    <proj4>+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs</proj4>
+                    <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
                     <srsid>3452</srsid>
                     <srid>4326</srid>
                     <authid>EPSG:4326</authid>
@@ -410,26 +499,31 @@
                     <geographicflag>true</geographicflag>
                 </spatialrefsys>
             </srs>
-            <transparencyLevelInt>255</transparencyLevelInt>
             <provider encoding="System">postgres</provider>
+            <previewExpression></previewExpression>
             <vectorjoins/>
             <renderer-v2 symbollevels="0" type="singleSymbol">
                 <symbols>
-                    <symbol outputUnit="MM" alpha="1" type="marker" name="0">
+                    <symbol alpha="1" type="marker" name="0">
                         <layer pass="0" class="FontMarker" locked="0">
                             <prop k="angle" v="0"/>
                             <prop k="chr" v="B"/>
                             <prop k="color" v="0,0,0,255"/>
                             <prop k="font" v="Arial Black"/>
                             <prop k="offset" v="0,0"/>
+                            <prop k="offset_unit" v="MM"/>
                             <prop k="size" v="3.23"/>
+                            <prop k="size_unit" v="MM"/>
                         </layer>
                     </symbol>
                 </symbols>
                 <rotation field=""/>
-                <sizescale field=""/>
+                <sizescale field="" scalemethod="area"/>
             </renderer-v2>
             <customproperties/>
+            <blendMode>0</blendMode>
+            <featureBlendMode>0</featureBlendMode>
+            <layerTransparency>0</layerTransparency>
             <displayfield>name</displayfield>
             <label>0</label>
             <labelattributes>
@@ -453,24 +547,30 @@
                 <selectedonly on=""/>
             </labelattributes>
             <edittypes>
-                <edittype type="0" name="access"/>
-                <edittype type="0" name="name"/>
-                <edittype type="0" name="type"/>
+                <edittype labelontop="0" editable="1" type="0" name="access"/>
+                <edittype labelontop="0" editable="1" type="0" name="name"/>
+                <edittype labelontop="0" editable="1" type="0" name="type"/>
             </edittypes>
             <editform>.</editform>
             <editforminit></editforminit>
             <annotationform>.</annotationform>
+            <editorlayout>generatedlayout</editorlayout>
+            <excludeAttributesWMS/>
+            <excludeAttributesWFS/>
             <attributeactions/>
         </maplayer>
-        <maplayer minimumScale="0" maximumScale="1e+08" geometry="Polygon" type="vector" hasScaleBasedVisibilityFlag="0">
+        <maplayer minimumScale="0" maximumScale="1e+08" minLabelScale="1" maxLabelScale="1e+08" geometry="Polygon" type="vector" hasScaleBasedVisibilityFlag="0" scaleBasedLabelVisibilityFlag="0">
             <id>buildings20130331194441183</id>
-            <datasource>dbname='qgis-bw' host=localhost port=5432 user='dkiselev' password='123' sslmode=disable key='id' srid=4326 type=POLYGON table="buildings" (geom) sql=</datasource>
+            <datasource>dbname='tacloban' host=localhost port=5432 user='dkiselev' password='123' sslmode=disable key='id' srid=4326 type=POLYGON table="buildings" (geom) sql=</datasource>
             <title></title>
             <abstract></abstract>
+            <keywordList>
+                <value></value>
+            </keywordList>
             <layername>buildings</layername>
             <srs>
                 <spatialrefsys>
-                    <proj4>+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs</proj4>
+                    <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
                     <srsid>3452</srsid>
                     <srid>4326</srid>
                     <authid>EPSG:4326</authid>
@@ -480,16 +580,18 @@
                     <geographicflag>true</geographicflag>
                 </spatialrefsys>
             </srs>
-            <transparencyLevelInt>255</transparencyLevelInt>
             <provider encoding="System">postgres</provider>
+            <previewExpression></previewExpression>
             <vectorjoins/>
             <renderer-v2 symbollevels="0" type="singleSymbol">
                 <symbols>
-                    <symbol outputUnit="MM" alpha="1" type="fill" name="0">
+                    <symbol alpha="1" type="fill" name="0">
                         <layer pass="0" class="SimpleFill" locked="0">
+                            <prop k="border_width_unit" v="MM"/>
                             <prop k="color" v="230,230,230,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
                             <prop k="offset" v="0,0"/>
+                            <prop k="offset_unit" v="MM"/>
                             <prop k="style" v="solid"/>
                             <prop k="style_border" v="solid"/>
                             <prop k="width_border" v="0.1"/>
@@ -497,9 +599,12 @@
                     </symbol>
                 </symbols>
                 <rotation field=""/>
-                <sizescale field=""/>
+                <sizescale field="" scalemethod="area"/>
             </renderer-v2>
             <customproperties/>
+            <blendMode>0</blendMode>
+            <featureBlendMode>0</featureBlendMode>
+            <layerTransparency>0</layerTransparency>
             <displayfield>name</displayfield>
             <label>0</label>
             <labelattributes>
@@ -523,27 +628,33 @@
                 <selectedonly on=""/>
             </labelattributes>
             <edittypes>
-                <edittype type="0" name="housenumber"/>
-                <edittype type="0" name="id"/>
-                <edittype type="0" name="levels"/>
-                <edittype type="0" name="name"/>
-                <edittype type="0" name="street"/>
-                <edittype type="0" name="type"/>
+                <edittype labelontop="0" editable="1" type="0" name="housenumber"/>
+                <edittype labelontop="0" editable="1" type="0" name="id"/>
+                <edittype labelontop="0" editable="1" type="0" name="levels"/>
+                <edittype labelontop="0" editable="1" type="0" name="name"/>
+                <edittype labelontop="0" editable="1" type="0" name="street"/>
+                <edittype labelontop="0" editable="1" type="0" name="type"/>
             </edittypes>
             <editform>.</editform>
             <editforminit></editforminit>
             <annotationform>.</annotationform>
+            <editorlayout>generatedlayout</editorlayout>
+            <excludeAttributesWMS/>
+            <excludeAttributesWFS/>
             <attributeactions/>
         </maplayer>
-        <maplayer minimumScale="0" maximumScale="1e+08" geometry="Line" type="vector" hasScaleBasedVisibilityFlag="0">
+        <maplayer minimumScale="0" maximumScale="1e+08" minLabelScale="1" maxLabelScale="1e+08" geometry="Line" type="vector" hasScaleBasedVisibilityFlag="0" scaleBasedLabelVisibilityFlag="0">
             <id>coastline20130331211317525</id>
-            <datasource>dbname='qgis-bw' host=localhost port=5432 user='dkiselev' password='123' sslmode=disable key='tid' srid=4326 type=LINESTRING table="coastline" (geom) sql=</datasource>
+            <datasource>dbname='tacloban' host=localhost port=5432 user='dkiselev' password='123' sslmode=disable key='tid' srid=4326 type=LINESTRING table="coastline" (geom) sql=</datasource>
             <title></title>
             <abstract></abstract>
+            <keywordList>
+                <value></value>
+            </keywordList>
             <layername>coastline</layername>
             <srs>
                 <spatialrefsys>
-                    <proj4>+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs</proj4>
+                    <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
                     <srsid>3452</srsid>
                     <srid>4326</srid>
                     <authid>EPSG:4326</authid>
@@ -553,58 +664,73 @@
                     <geographicflag>true</geographicflag>
                 </spatialrefsys>
             </srs>
-            <transparencyLevelInt>255</transparencyLevelInt>
             <provider encoding="System">postgres</provider>
+            <previewExpression></previewExpression>
             <vectorjoins/>
             <renderer-v2 symbollevels="0" type="singleSymbol">
                 <symbols>
-                    <symbol outputUnit="MM" alpha="1" type="line" name="0">
+                    <symbol alpha="1" type="line" name="0">
                         <layer pass="0" class="SimpleLine" locked="0">
                             <prop k="capstyle" v="square"/>
                             <prop k="color" v="150,150,150,255"/>
                             <prop k="customdash" v="5;2"/>
+                            <prop k="customdash_unit" v="MM"/>
                             <prop k="joinstyle" v="bevel"/>
                             <prop k="offset" v="4.5"/>
+                            <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="solid"/>
                             <prop k="use_custom_dash" v="0"/>
                             <prop k="width" v="0.26"/>
+                            <prop k="width_unit" v="MM"/>
                         </layer>
                         <layer pass="0" class="SimpleLine" locked="0">
                             <prop k="capstyle" v="square"/>
                             <prop k="color" v="100,100,100,255"/>
                             <prop k="customdash" v="5;2"/>
+                            <prop k="customdash_unit" v="MM"/>
                             <prop k="joinstyle" v="bevel"/>
                             <prop k="offset" v="2.5"/>
+                            <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="solid"/>
                             <prop k="use_custom_dash" v="0"/>
                             <prop k="width" v="0.26"/>
+                            <prop k="width_unit" v="MM"/>
                         </layer>
                         <layer pass="0" class="SimpleLine" locked="0">
                             <prop k="capstyle" v="square"/>
                             <prop k="color" v="100,100,100,255"/>
                             <prop k="customdash" v="5;2"/>
+                            <prop k="customdash_unit" v="MM"/>
                             <prop k="joinstyle" v="bevel"/>
                             <prop k="offset" v="1"/>
+                            <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="solid"/>
                             <prop k="use_custom_dash" v="0"/>
                             <prop k="width" v="0.26"/>
+                            <prop k="width_unit" v="MM"/>
                         </layer>
                         <layer pass="0" class="SimpleLine" locked="0">
                             <prop k="capstyle" v="square"/>
                             <prop k="color" v="100,100,100,255"/>
                             <prop k="customdash" v="5;2"/>
+                            <prop k="customdash_unit" v="MM"/>
                             <prop k="joinstyle" v="bevel"/>
                             <prop k="offset" v="0"/>
+                            <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="solid"/>
                             <prop k="use_custom_dash" v="0"/>
                             <prop k="width" v="0.26"/>
+                            <prop k="width_unit" v="MM"/>
                         </layer>
                     </symbol>
                 </symbols>
                 <rotation field=""/>
-                <sizescale field=""/>
+                <sizescale field="" scalemethod="area"/>
             </renderer-v2>
             <customproperties/>
+            <blendMode>0</blendMode>
+            <featureBlendMode>0</featureBlendMode>
+            <layerTransparency>0</layerTransparency>
             <displayfield></displayfield>
             <label>0</label>
             <labelattributes>
@@ -630,17 +756,23 @@
             <editform>.</editform>
             <editforminit></editforminit>
             <annotationform>.</annotationform>
+            <editorlayout>generatedlayout</editorlayout>
+            <excludeAttributesWMS/>
+            <excludeAttributesWFS/>
             <attributeactions/>
         </maplayer>
-        <maplayer minimumScale="0" maximumScale="1e+08" geometry="Polygon" type="vector" hasScaleBasedVisibilityFlag="0">
+        <maplayer minimumScale="0" maximumScale="1e+08" minLabelScale="1" maxLabelScale="1e+08" geometry="Polygon" type="vector" hasScaleBasedVisibilityFlag="0" scaleBasedLabelVisibilityFlag="0">
             <id>landuse20130405171833251</id>
-            <datasource>dbname='qgis-bw' host=localhost port=5432 user='dkiselev' password='123' sslmode=disable key='tid' srid=4326 type=MULTIPOLYGON table="landuse" (geom) sql=</datasource>
+            <datasource>dbname='tacloban' host=localhost port=5432 user='dkiselev' password='123' sslmode=disable key='tid' srid=4326 type=MULTIPOLYGON table="landuse" (geom) sql=</datasource>
             <title></title>
             <abstract></abstract>
+            <keywordList>
+                <value></value>
+            </keywordList>
             <layername>landuse</layername>
             <srs>
                 <spatialrefsys>
-                    <proj4>+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs</proj4>
+                    <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
                     <srsid>3452</srsid>
                     <srid>4326</srid>
                     <authid>EPSG:4326</authid>
@@ -650,19 +782,21 @@
                     <geographicflag>true</geographicflag>
                 </spatialrefsys>
             </srs>
-            <transparencyLevelInt>255</transparencyLevelInt>
             <provider encoding="System">postgres</provider>
+            <previewExpression></previewExpression>
             <vectorjoins/>
             <renderer-v2 symbollevels="0" type="RuleRenderer">
                 <rules>
                     <rule filter="type = 'residential'" symbol="0"/>
                 </rules>
                 <symbols>
-                    <symbol outputUnit="MM" alpha="1" type="fill" name="0">
+                    <symbol alpha="1" type="fill" name="0">
                         <layer pass="0" class="SimpleFill" locked="0">
+                            <prop k="border_width_unit" v="MM"/>
                             <prop k="color" v="250,250,250,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
                             <prop k="offset" v="0,0"/>
+                            <prop k="offset_unit" v="MM"/>
                             <prop k="style" v="solid"/>
                             <prop k="style_border" v="no"/>
                             <prop k="width_border" v="0.1"/>
@@ -671,6 +805,9 @@
                 </symbols>
             </renderer-v2>
             <customproperties/>
+            <blendMode>0</blendMode>
+            <featureBlendMode>0</featureBlendMode>
+            <layerTransparency>0</layerTransparency>
             <displayfield>name</displayfield>
             <label>0</label>
             <labelattributes>
@@ -694,23 +831,29 @@
                 <selectedonly on=""/>
             </labelattributes>
             <edittypes>
-                <edittype type="0" name="name"/>
-                <edittype type="0" name="type"/>
+                <edittype labelontop="0" editable="1" type="0" name="name"/>
+                <edittype labelontop="0" editable="1" type="0" name="type"/>
             </edittypes>
             <editform>.</editform>
             <editforminit></editforminit>
             <annotationform>.</annotationform>
+            <editorlayout>generatedlayout</editorlayout>
+            <excludeAttributesWMS/>
+            <excludeAttributesWFS/>
             <attributeactions/>
         </maplayer>
-        <maplayer minimumScale="0" maximumScale="1e+08" geometry="Polygon" type="vector" hasScaleBasedVisibilityFlag="0">
+        <maplayer minimumScale="0" maximumScale="1e+08" minLabelScale="1" maxLabelScale="1e+08" geometry="Polygon" type="vector" hasScaleBasedVisibilityFlag="0" scaleBasedLabelVisibilityFlag="0">
             <id>leisure20130405171833227</id>
-            <datasource>dbname='qgis-bw' host=localhost port=5432 user='dkiselev' password='123' sslmode=disable key='tid' srid=4326 type=MULTIPOLYGON table="leisure" (geom) sql=</datasource>
+            <datasource>dbname='tacloban' host=localhost port=5432 user='dkiselev' password='123' sslmode=disable key='tid' srid=4326 type=MULTIPOLYGON table="leisure" (geom) sql=</datasource>
             <title></title>
             <abstract></abstract>
+            <keywordList>
+                <value></value>
+            </keywordList>
             <layername>leisure</layername>
             <srs>
                 <spatialrefsys>
-                    <proj4>+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs</proj4>
+                    <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
                     <srsid>3452</srsid>
                     <srid>4326</srid>
                     <authid>EPSG:4326</authid>
@@ -720,46 +863,59 @@
                     <geographicflag>true</geographicflag>
                 </spatialrefsys>
             </srs>
-            <transparencyLevelInt>255</transparencyLevelInt>
             <provider encoding="System">postgres</provider>
+            <previewExpression></previewExpression>
             <vectorjoins/>
             <renderer-v2 symbollevels="0" type="RuleRenderer">
                 <rules>
                     <rule filter="&quot;type&quot; = 'park'" symbol="0"/>
                 </rules>
                 <symbols>
-                    <symbol outputUnit="MM" alpha="1" type="fill" name="0">
+                    <symbol alpha="1" type="fill" name="0">
                         <layer pass="0" class="SimpleLine" locked="0">
                             <prop k="capstyle" v="square"/>
                             <prop k="color" v="0,0,0,255"/>
                             <prop k="customdash" v="5;2"/>
+                            <prop k="customdash_unit" v="MM"/>
                             <prop k="joinstyle" v="bevel"/>
                             <prop k="offset" v="0"/>
+                            <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="solid"/>
                             <prop k="use_custom_dash" v="0"/>
                             <prop k="width" v="0.26"/>
+                            <prop k="width_unit" v="MM"/>
                         </layer>
                         <layer pass="0" class="PointPatternFill" locked="0">
                             <prop k="displacement_x" v="0"/>
+                            <prop k="displacement_x_unit" v="MM"/>
                             <prop k="displacement_y" v="0"/>
+                            <prop k="displacement_y_unit" v="MM"/>
                             <prop k="distance_x" v="15"/>
+                            <prop k="distance_x_unit" v="MM"/>
                             <prop k="distance_y" v="15"/>
-                        </layer>
-                    </symbol>
-                    <symbol outputUnit="MM" alpha="1" type="marker" name="@0@1">
-                        <layer pass="0" class="SvgMarker" locked="0">
-                            <prop k="angle" v="0"/>
-                            <prop k="fill" v="#959595"/>
-                            <prop k="name" v="/home/dkiselev/Рабочий стол/1365193695_tree-2.svg"/>
-                            <prop k="offset" v="0,0"/>
-                            <prop k="outline" v="#000000"/>
-                            <prop k="outline-width" v="1"/>
-                            <prop k="size" v="8"/>
+                            <prop k="distance_y_unit" v="MM"/>
+                            <symbol alpha="1" type="marker" name="@0@1">
+                                <layer pass="0" class="SvgMarker" locked="0">
+                                    <prop k="angle" v="0"/>
+                                    <prop k="fill" v="#959595"/>
+                                    <prop k="name" v=""/>
+                                    <prop k="offset" v="0,0"/>
+                                    <prop k="offset_unit" v="MM"/>
+                                    <prop k="outline" v="#000000"/>
+                                    <prop k="outline-width" v="1"/>
+                                    <prop k="outline_width_unit" v="MM"/>
+                                    <prop k="size" v="8"/>
+                                    <prop k="size_unit" v="MM"/>
+                                </layer>
+                            </symbol>
                         </layer>
                     </symbol>
                 </symbols>
             </renderer-v2>
             <customproperties/>
+            <blendMode>0</blendMode>
+            <featureBlendMode>0</featureBlendMode>
+            <layerTransparency>0</layerTransparency>
             <displayfield>name</displayfield>
             <label>0</label>
             <labelattributes>
@@ -783,23 +939,29 @@
                 <selectedonly on=""/>
             </labelattributes>
             <edittypes>
-                <edittype type="0" name="name"/>
-                <edittype type="0" name="type"/>
+                <edittype labelontop="0" editable="1" type="0" name="name"/>
+                <edittype labelontop="0" editable="1" type="0" name="type"/>
             </edittypes>
             <editform>.</editform>
             <editforminit></editforminit>
             <annotationform>.</annotationform>
+            <editorlayout>generatedlayout</editorlayout>
+            <excludeAttributesWMS/>
+            <excludeAttributesWFS/>
             <attributeactions/>
         </maplayer>
-        <maplayer minimumScale="0" maximumScale="1e+08" geometry="Point" type="vector" hasScaleBasedVisibilityFlag="0">
+        <maplayer minimumScale="0" maximumScale="1e+08" minLabelScale="1" maxLabelScale="1e+08" geometry="Point" type="vector" hasScaleBasedVisibilityFlag="0" scaleBasedLabelVisibilityFlag="0">
             <id>poi20130331194441210</id>
-            <datasource>dbname='qgis-bw' host=localhost port=5432 user='dkiselev' password='123' sslmode=disable key='tid' srid=4326 type=POINT table="poi" (geom) sql=</datasource>
+            <datasource>dbname='tacloban' host=localhost port=5432 user='dkiselev' password='123' sslmode=disable key='tid' srid=4326 type=POINT table="poi" (geom) sql=</datasource>
             <title></title>
             <abstract></abstract>
+            <keywordList>
+                <value></value>
+            </keywordList>
             <layername>poi</layername>
             <srs>
                 <spatialrefsys>
-                    <proj4>+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs</proj4>
+                    <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
                     <srsid>3452</srsid>
                     <srid>4326</srid>
                     <authid>EPSG:4326</authid>
@@ -809,24 +971,29 @@
                     <geographicflag>true</geographicflag>
                 </spatialrefsys>
             </srs>
-            <transparencyLevelInt>255</transparencyLevelInt>
             <provider encoding="System">postgres</provider>
+            <previewExpression></previewExpression>
             <vectorjoins/>
             <renderer-v2 symbollevels="0" type="singleSymbol">
                 <symbols>
-                    <symbol outputUnit="MM" alpha="1" type="marker" name="0">
+                    <symbol alpha="1" type="marker" name="0">
                         <layer pass="0" class="SimpleMarker" locked="0">
                             <prop k="angle" v="0"/>
                             <prop k="color" v="0,0,0,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
                             <prop k="name" v="cross2"/>
                             <prop k="offset" v="0,0"/>
+                            <prop k="offset_unit" v="MM"/>
+                            <prop k="outline_width" v="0"/>
+                            <prop k="outline_width_unit" v="MM"/>
+                            <prop k="scale_method" v="area"/>
                             <prop k="size" v="5"/>
+                            <prop k="size_unit" v="MM"/>
                         </layer>
                     </symbol>
                 </symbols>
                 <rotation field=""/>
-                <sizescale field=""/>
+                <sizescale field="" scalemethod="area"/>
             </renderer-v2>
             <customproperties>
                 <property key="labeling" value="pal"/>
@@ -835,21 +1002,6 @@
                 <property key="labeling/bufferColorG" value="255"/>
                 <property key="labeling/bufferColorR" value="255"/>
                 <property key="labeling/bufferSize" value="1"/>
-                <property key="labeling/dataDefinedProperty0" value=""/>
-                <property key="labeling/dataDefinedProperty1" value=""/>
-                <property key="labeling/dataDefinedProperty10" value=""/>
-                <property key="labeling/dataDefinedProperty11" value=""/>
-                <property key="labeling/dataDefinedProperty12" value=""/>
-                <property key="labeling/dataDefinedProperty13" value=""/>
-                <property key="labeling/dataDefinedProperty14" value=""/>
-                <property key="labeling/dataDefinedProperty2" value=""/>
-                <property key="labeling/dataDefinedProperty3" value=""/>
-                <property key="labeling/dataDefinedProperty4" value=""/>
-                <property key="labeling/dataDefinedProperty5" value=""/>
-                <property key="labeling/dataDefinedProperty6" value=""/>
-                <property key="labeling/dataDefinedProperty7" value=""/>
-                <property key="labeling/dataDefinedProperty8" value=""/>
-                <property key="labeling/dataDefinedProperty9" value=""/>
                 <property key="labeling/decimals" value="0"/>
                 <property key="labeling/dist" value="0"/>
                 <property key="labeling/distInMapUnits" value="false"/>
@@ -879,6 +1031,9 @@
                 <property key="labeling/textColorR" value="0"/>
                 <property key="labeling/wrapChar" value="20"/>
             </customproperties>
+            <blendMode>0</blendMode>
+            <featureBlendMode>0</featureBlendMode>
+            <layerTransparency>0</layerTransparency>
             <displayfield>name</displayfield>
             <label>1</label>
             <labelfield>name</labelfield>
@@ -903,28 +1058,34 @@
                 <selectedonly on=""/>
             </labelattributes>
             <edittypes>
-                <edittype type="0" name="building"/>
-                <edittype type="0" name="name"/>
-                <edittype type="0" name="phone"/>
-                <edittype type="0" name="primary_type"/>
-                <edittype type="0" name="secondary_type"/>
-                <edittype type="0" name="site"/>
-                <edittype type="0" name="wh"/>
+                <edittype labelontop="0" editable="1" type="0" name="building"/>
+                <edittype labelontop="0" editable="1" type="0" name="name"/>
+                <edittype labelontop="0" editable="1" type="0" name="phone"/>
+                <edittype labelontop="0" editable="1" type="0" name="primary_type"/>
+                <edittype labelontop="0" editable="1" type="0" name="secondary_type"/>
+                <edittype labelontop="0" editable="1" type="0" name="site"/>
+                <edittype labelontop="0" editable="1" type="0" name="wh"/>
             </edittypes>
             <editform>.</editform>
             <editforminit></editforminit>
             <annotationform>.</annotationform>
+            <editorlayout>generatedlayout</editorlayout>
+            <excludeAttributesWMS/>
+            <excludeAttributesWFS/>
             <attributeactions/>
         </maplayer>
-        <maplayer minimumScale="0" maximumScale="1e+08" geometry="Line" type="vector" hasScaleBasedVisibilityFlag="0">
+        <maplayer minimumScale="0" maximumScale="1e+08" minLabelScale="1" maxLabelScale="1e+08" geometry="Line" type="vector" hasScaleBasedVisibilityFlag="0" scaleBasedLabelVisibilityFlag="0">
             <id>railroads20130331194441236</id>
-            <datasource>dbname='qgis-bw' host=localhost port=5432 user='dkiselev' password='123' sslmode=disable key='tid' srid=4326 type=LINESTRING table="railroads" (geom) sql=</datasource>
+            <datasource>dbname='tacloban' host=localhost port=5432 user='dkiselev' password='123' sslmode=disable key='tid' srid=4326 type=LINESTRING table="railroads" (geom) sql=</datasource>
             <title></title>
             <abstract></abstract>
+            <keywordList>
+                <value></value>
+            </keywordList>
             <layername>railroads</layername>
             <srs>
                 <spatialrefsys>
-                    <proj4>+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs</proj4>
+                    <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
                     <srsid>3452</srsid>
                     <srid>4326</srid>
                     <authid>EPSG:4326</authid>
@@ -934,38 +1095,47 @@
                     <geographicflag>true</geographicflag>
                 </spatialrefsys>
             </srs>
-            <transparencyLevelInt>255</transparencyLevelInt>
             <provider encoding="System">postgres</provider>
+            <previewExpression></previewExpression>
             <vectorjoins/>
             <renderer-v2 symbollevels="0" type="singleSymbol">
                 <symbols>
-                    <symbol outputUnit="MM" alpha="1" type="line" name="0">
+                    <symbol alpha="1" type="line" name="0">
                         <layer pass="0" class="SimpleLine" locked="0">
                             <prop k="capstyle" v="round"/>
                             <prop k="color" v="0,0,0,255"/>
                             <prop k="customdash" v="5;2"/>
+                            <prop k="customdash_unit" v="MM"/>
                             <prop k="joinstyle" v="round"/>
                             <prop k="offset" v="0"/>
+                            <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="solid"/>
                             <prop k="use_custom_dash" v="0"/>
                             <prop k="width" v="0.66"/>
+                            <prop k="width_unit" v="MM"/>
                         </layer>
                         <layer pass="2" class="SimpleLine" locked="0">
                             <prop k="capstyle" v="round"/>
                             <prop k="color" v="255,255,255,255"/>
                             <prop k="customdash" v="5;2"/>
+                            <prop k="customdash_unit" v="MM"/>
                             <prop k="joinstyle" v="round"/>
                             <prop k="offset" v="0"/>
+                            <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="dash"/>
                             <prop k="use_custom_dash" v="0"/>
                             <prop k="width" v="0.53"/>
+                            <prop k="width_unit" v="MM"/>
                         </layer>
                     </symbol>
                 </symbols>
                 <rotation field=""/>
-                <sizescale field=""/>
+                <sizescale field="" scalemethod="area"/>
             </renderer-v2>
             <customproperties/>
+            <blendMode>0</blendMode>
+            <featureBlendMode>0</featureBlendMode>
+            <layerTransparency>0</layerTransparency>
             <displayfield>type</displayfield>
             <label>0</label>
             <labelattributes>
@@ -989,24 +1159,30 @@
                 <selectedonly on=""/>
             </labelattributes>
             <edittypes>
-                <edittype type="0" name="name"/>
-                <edittype type="0" name="osm_id"/>
-                <edittype type="0" name="type"/>
+                <edittype labelontop="0" editable="1" type="0" name="name"/>
+                <edittype labelontop="0" editable="1" type="0" name="osm_id"/>
+                <edittype labelontop="0" editable="1" type="0" name="type"/>
             </edittypes>
             <editform>.</editform>
             <editforminit></editforminit>
             <annotationform>../..</annotationform>
+            <editorlayout>generatedlayout</editorlayout>
+            <excludeAttributesWMS/>
+            <excludeAttributesWFS/>
             <attributeactions/>
         </maplayer>
-        <maplayer minimumScale="0" maximumScale="1e+08" geometry="Line" type="vector" hasScaleBasedVisibilityFlag="0">
+        <maplayer minimumScale="0" maximumScale="1e+08" minLabelScale="1" maxLabelScale="1e+08" geometry="Line" type="vector" hasScaleBasedVisibilityFlag="0" scaleBasedLabelVisibilityFlag="0">
             <id>rivers_ways20130331194441246</id>
-            <datasource>dbname='qgis-bw' host=localhost port=5432 user='dkiselev' password='123' sslmode=disable key='tid' srid=4326 type=LINESTRING table="rivers_ways" (geom) sql=</datasource>
+            <datasource>dbname='tacloban' host=localhost port=5432 user='dkiselev' password='123' sslmode=disable key='tid' srid=4326 type=LINESTRING table="rivers_ways" (geom) sql=</datasource>
             <title></title>
             <abstract></abstract>
+            <keywordList>
+                <value></value>
+            </keywordList>
             <layername>rivers_ways</layername>
             <srs>
                 <spatialrefsys>
-                    <proj4>+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs</proj4>
+                    <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
                     <srsid>3452</srsid>
                     <srid>4326</srid>
                     <authid>EPSG:4326</authid>
@@ -1016,28 +1192,34 @@
                     <geographicflag>true</geographicflag>
                 </spatialrefsys>
             </srs>
-            <transparencyLevelInt>255</transparencyLevelInt>
             <provider encoding="System">postgres</provider>
+            <previewExpression></previewExpression>
             <vectorjoins/>
             <renderer-v2 symbollevels="0" type="singleSymbol">
                 <symbols>
-                    <symbol outputUnit="MM" alpha="1" type="line" name="0">
+                    <symbol alpha="1" type="line" name="0">
                         <layer pass="0" class="SimpleLine" locked="0">
                             <prop k="capstyle" v="square"/>
                             <prop k="color" v="165,165,165,255"/>
                             <prop k="customdash" v="5;2"/>
+                            <prop k="customdash_unit" v="MM"/>
                             <prop k="joinstyle" v="bevel"/>
                             <prop k="offset" v="0"/>
+                            <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="solid"/>
                             <prop k="use_custom_dash" v="0"/>
                             <prop k="width" v="2"/>
+                            <prop k="width_unit" v="MM"/>
                         </layer>
                     </symbol>
                 </symbols>
                 <rotation field=""/>
-                <sizescale field=""/>
+                <sizescale field="" scalemethod="area"/>
             </renderer-v2>
             <customproperties/>
+            <blendMode>0</blendMode>
+            <featureBlendMode>0</featureBlendMode>
+            <layerTransparency>0</layerTransparency>
             <displayfield>name</displayfield>
             <label>0</label>
             <labelattributes>
@@ -1061,23 +1243,29 @@
                 <selectedonly on=""/>
             </labelattributes>
             <edittypes>
-                <edittype type="0" name="name"/>
-                <edittype type="0" name="type"/>
+                <edittype labelontop="0" editable="1" type="0" name="name"/>
+                <edittype labelontop="0" editable="1" type="0" name="type"/>
             </edittypes>
             <editform>.</editform>
             <editforminit></editforminit>
             <annotationform>.</annotationform>
+            <editorlayout>generatedlayout</editorlayout>
+            <excludeAttributesWMS/>
+            <excludeAttributesWFS/>
             <attributeactions/>
         </maplayer>
-        <maplayer minimumScale="0" maximumScale="1e+08" geometry="Line" type="vector" hasScaleBasedVisibilityFlag="0">
+        <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" minLabelScale="1" maxLabelScale="1e+08" geometry="Line" type="vector" hasScaleBasedVisibilityFlag="0" scaleBasedLabelVisibilityFlag="0">
             <id>roads20130331194825030</id>
-            <datasource>dbname='qgis-bw' host=localhost port=5432 user='dkiselev' password='123' sslmode=disable key='id' srid=4326 type=LINESTRING table="roads" (geom) sql=</datasource>
+            <datasource>dbname='tacloban' host=localhost port=5432 user='dkiselev' password='123' sslmode=disable key='id' srid=4326 type=LINESTRING table="roads" (geom) sql=</datasource>
             <title></title>
             <abstract></abstract>
+            <keywordList>
+                <value></value>
+            </keywordList>
             <layername>roads</layername>
             <srs>
                 <spatialrefsys>
-                    <proj4>+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs</proj4>
+                    <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
                     <srsid>3452</srsid>
                     <srid>4326</srid>
                     <authid>EPSG:4326</authid>
@@ -1087,251 +1275,335 @@
                     <geographicflag>true</geographicflag>
                 </spatialrefsys>
             </srs>
-            <transparencyLevelInt>255</transparencyLevelInt>
             <provider encoding="System">postgres</provider>
+            <previewExpression></previewExpression>
             <vectorjoins/>
             <renderer-v2 symbollevels="0" type="RuleRenderer">
                 <rules>
-                    <rule filter=" &quot;type&quot; IN ('primary', 'secondary', 'tertiary')" symbol="0" label="priamry-secondary-terrtiary">
-                        <rule filter="&quot;surface&quot; in ('asphalt', 'concrete', 'cobblestone')" symbol="1" label="paved"/>
+                    <rule filter="&quot;type&quot; IN ('trunk', 'motorway', 'motorway_link', 'trunk_link')" symbol="0" label="trunk-motorway"/>
+                    <rule filter=" &quot;type&quot; IN ('primary', 'secondary', 'tertiary', 'primary_link', 'secondary_link', 'tertiary_link')" symbol="1" label="priamry-secondary-terrtiary">
+                        <rule filter="&quot;surface&quot; in ('asphalt', 'concrete', 'cobblestone')" symbol="2" label="paved"/>
                     </rule>
-                    <rule filter=" &quot;type&quot;  in ('residential', 'unclassified')" symbol="2" label="residential-unclassified">
-                        <rule filter="&quot;surface&quot; in ('asphalt', 'concrete', 'cobblestone')" symbol="3" label="paved"/>
+                    <rule filter=" &quot;type&quot;  in ('residential', 'unclassified')" symbol="3" label="residential-unclassified">
+                        <rule filter="&quot;surface&quot; in ('asphalt', 'concrete', 'cobblestone')" symbol="4" label="paved"/>
                     </rule>
-                    <rule filter="&quot;type&quot; = 'service'" symbol="4" label="services">
-                        <rule filter="&quot;surface&quot; in ('asphalt', 'concrete', 'cobblestone')" symbol="5" label="paved"/>
+                    <rule filter="&quot;type&quot; = 'service'" symbol="5" label="services">
+                        <rule filter="&quot;surface&quot; in ('asphalt', 'concrete', 'cobblestone')" symbol="6" label="paved"/>
                     </rule>
-                    <rule filter="type = 'footway'" symbol="6" label="footway"/>
-                    <rule filter="&quot;type&quot;='pedestrian'" symbol="7" label="pedestrian">
-                        <rule filter="&quot;surface&quot; in ('asphalt', 'concrete', 'cobblestone')" symbol="8" label="paved"/>
+                    <rule filter="type = 'footway'" symbol="7" label="footway"/>
+                    <rule filter="&quot;type&quot;='pedestrian'" symbol="8" label="pedestrian">
+                        <rule filter="&quot;surface&quot; in ('asphalt', 'concrete', 'cobblestone')" symbol="9" label="paved"/>
                     </rule>
-                    <rule filter="&quot;oneway&quot; = 't'" symbol="9" label="oneway"/>
-                    <rule filter="&quot;bridge&quot; = 't' or &quot;tunel&quot; = 't'" symbol="10" label="bridge"/>
-                    <rule filter=" &quot;type&quot; = 'steps'" symbol="11" label="steps"/>
+                    <rule filter="&quot;oneway&quot; = 't'" symbol="10" label="oneway"/>
+                    <rule filter="&quot;bridge&quot; = 't' or &quot;tunel&quot; = 't'" symbol="11" label="bridge"/>
+                    <rule filter=" &quot;type&quot; = 'steps'" symbol="12" label="steps"/>
                 </rules>
                 <symbols>
-                    <symbol outputUnit="MM" alpha="1" type="line" name="0">
+                    <symbol alpha="1" type="line" name="0">
+                        <layer pass="0" class="SimpleLine" locked="0">
+                            <prop k="capstyle" v="square"/>
+                            <prop k="color" v="0,0,0,255"/>
+                            <prop k="customdash" v="5;2"/>
+                            <prop k="customdash_unit" v="MM"/>
+                            <prop k="joinstyle" v="bevel"/>
+                            <prop k="offset" v="-1"/>
+                            <prop k="offset_unit" v="MM"/>
+                            <prop k="penstyle" v="solid"/>
+                            <prop k="use_custom_dash" v="0"/>
+                            <prop k="width" v="0.75"/>
+                            <prop k="width_unit" v="MM"/>
+                        </layer>
+                        <layer pass="0" class="SimpleLine" locked="0">
+                            <prop k="capstyle" v="square"/>
+                            <prop k="color" v="0,0,0,255"/>
+                            <prop k="customdash" v="5;2"/>
+                            <prop k="customdash_unit" v="MM"/>
+                            <prop k="joinstyle" v="bevel"/>
+                            <prop k="offset" v="1"/>
+                            <prop k="offset_unit" v="MM"/>
+                            <prop k="penstyle" v="solid"/>
+                            <prop k="use_custom_dash" v="0"/>
+                            <prop k="width" v="0.75"/>
+                            <prop k="width_unit" v="MM"/>
+                        </layer>
+                    </symbol>
+                    <symbol alpha="1" type="line" name="1">
                         <layer pass="1" class="SimpleLine" locked="0">
                             <prop k="capstyle" v="square"/>
                             <prop k="color" v="0,0,0,255"/>
                             <prop k="customdash" v="5;2"/>
+                            <prop k="customdash_unit" v="MM"/>
                             <prop k="joinstyle" v="bevel"/>
                             <prop k="offset" v="1"/>
+                            <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="solid"/>
                             <prop k="use_custom_dash" v="0"/>
                             <prop k="width" v="0.1"/>
+                            <prop k="width_unit" v="MM"/>
                         </layer>
                         <layer pass="0" class="SimpleLine" locked="0">
                             <prop k="capstyle" v="square"/>
                             <prop k="color" v="0,0,0,255"/>
                             <prop k="customdash" v="5;2"/>
+                            <prop k="customdash_unit" v="MM"/>
                             <prop k="joinstyle" v="bevel"/>
                             <prop k="offset" v="-1"/>
+                            <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="solid"/>
                             <prop k="use_custom_dash" v="0"/>
                             <prop k="width" v="0.1"/>
+                            <prop k="width_unit" v="MM"/>
                         </layer>
                         <layer pass="0" class="SimpleLine" locked="0">
                             <prop k="capstyle" v="square"/>
                             <prop k="color" v="0,0,0,255"/>
                             <prop k="customdash" v="5;2"/>
+                            <prop k="customdash_unit" v="MM"/>
                             <prop k="joinstyle" v="bevel"/>
                             <prop k="offset" v="0"/>
+                            <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="solid"/>
                             <prop k="use_custom_dash" v="0"/>
                             <prop k="width" v="0.3"/>
+                            <prop k="width_unit" v="MM"/>
                         </layer>
                     </symbol>
-                    <symbol outputUnit="MM" alpha="1" type="line" name="1">
-                        <layer pass="0" class="SimpleLine" locked="0">
-                            <prop k="capstyle" v="square"/>
-                            <prop k="color" v="200,200,200,255"/>
-                            <prop k="customdash" v="5;2"/>
-                            <prop k="joinstyle" v="bevel"/>
+                    <symbol alpha="1" type="line" name="10">
+                        <layer pass="0" class="MarkerLine" locked="0">
+                            <prop k="interval" v="15"/>
+                            <prop k="interval_unit" v="MM"/>
                             <prop k="offset" v="0"/>
-                            <prop k="penstyle" v="solid"/>
-                            <prop k="use_custom_dash" v="0"/>
-                            <prop k="width" v="2"/>
-                        </layer>
-                    </symbol>
-                    <symbol outputUnit="MM" alpha="1" type="line" name="10">
-                        <layer pass="0" class="SimpleLine" locked="0">
-                            <prop k="capstyle" v="square"/>
-                            <prop k="color" v="0,0,0,255"/>
-                            <prop k="customdash" v="5;2"/>
-                            <prop k="joinstyle" v="bevel"/>
-                            <prop k="offset" v="-1.5"/>
-                            <prop k="penstyle" v="solid"/>
-                            <prop k="use_custom_dash" v="0"/>
-                            <prop k="width" v="0.1"/>
-                        </layer>
-                        <layer pass="0" class="SimpleLine" locked="0">
-                            <prop k="capstyle" v="square"/>
-                            <prop k="color" v="0,0,0,255"/>
-                            <prop k="customdash" v="5;2"/>
-                            <prop k="joinstyle" v="bevel"/>
-                            <prop k="offset" v="1.5"/>
-                            <prop k="penstyle" v="solid"/>
-                            <prop k="use_custom_dash" v="0"/>
-                            <prop k="width" v="0.1"/>
-                        </layer>
-                    </symbol>
-                    <symbol outputUnit="MM" alpha="1" type="line" name="11">
-                        <layer pass="1" class="MarkerLine" locked="0">
-                            <prop k="interval" v="1"/>
-                            <prop k="offset" v="0"/>
+                            <prop k="offset_unit" v="MM"/>
                             <prop k="placement" v="interval"/>
                             <prop k="rotate" v="1"/>
+                            <symbol alpha="1" type="marker" name="@10@0">
+                                <layer pass="0" class="SimpleMarker" locked="0">
+                                    <prop k="angle" v="90"/>
+                                    <prop k="color" v="0,0,0,255"/>
+                                    <prop k="color_border" v="0,0,0,255"/>
+                                    <prop k="name" v="arrow"/>
+                                    <prop k="offset" v="0,0"/>
+                                    <prop k="offset_unit" v="MM"/>
+                                    <prop k="outline_width" v="0"/>
+                                    <prop k="outline_width_unit" v="MM"/>
+                                    <prop k="scale_method" v="area"/>
+                                    <prop k="size" v="3"/>
+                                    <prop k="size_unit" v="MM"/>
+                                </layer>
+                            </symbol>
                         </layer>
                     </symbol>
-                    <symbol outputUnit="MM" alpha="1" type="line" name="2">
+                    <symbol alpha="1" type="line" name="11">
                         <layer pass="0" class="SimpleLine" locked="0">
                             <prop k="capstyle" v="square"/>
                             <prop k="color" v="0,0,0,255"/>
                             <prop k="customdash" v="5;2"/>
+                            <prop k="customdash_unit" v="MM"/>
                             <prop k="joinstyle" v="bevel"/>
-                            <prop k="offset" v="1"/>
+                            <prop k="offset" v="-1.5"/>
+                            <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="solid"/>
                             <prop k="use_custom_dash" v="0"/>
-                            <prop k="width" v="0.05"/>
+                            <prop k="width" v="0.1"/>
+                            <prop k="width_unit" v="MM"/>
                         </layer>
                         <layer pass="0" class="SimpleLine" locked="0">
                             <prop k="capstyle" v="square"/>
                             <prop k="color" v="0,0,0,255"/>
                             <prop k="customdash" v="5;2"/>
+                            <prop k="customdash_unit" v="MM"/>
                             <prop k="joinstyle" v="bevel"/>
-                            <prop k="offset" v="-1"/>
+                            <prop k="offset" v="1.5"/>
+                            <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="solid"/>
                             <prop k="use_custom_dash" v="0"/>
-                            <prop k="width" v="0.05"/>
+                            <prop k="width" v="0.1"/>
+                            <prop k="width_unit" v="MM"/>
                         </layer>
                     </symbol>
-                    <symbol outputUnit="MM" alpha="1" type="line" name="3">
+                    <symbol alpha="1" type="line" name="12">
+                        <layer pass="1" class="MarkerLine" locked="0">
+                            <prop k="interval" v="1"/>
+                            <prop k="interval_unit" v="MM"/>
+                            <prop k="offset" v="0"/>
+                            <prop k="offset_unit" v="MM"/>
+                            <prop k="placement" v="interval"/>
+                            <prop k="rotate" v="1"/>
+                            <symbol alpha="1" type="marker" name="@12@0">
+                                <layer pass="0" class="EllipseMarker" locked="0">
+                                    <prop k="angle" v="90"/>
+                                    <prop k="fill_color" v="165,165,165,255"/>
+                                    <prop k="offset" v="0,0"/>
+                                    <prop k="offset_unit" v="MM"/>
+                                    <prop k="outline_color" v="255,255,255,255"/>
+                                    <prop k="outline_width" v="0"/>
+                                    <prop k="outline_width_unit" v="MM"/>
+                                    <prop k="symbol_height" v="0.7"/>
+                                    <prop k="symbol_height_unit" v="MM"/>
+                                    <prop k="symbol_name" v="rectangle"/>
+                                    <prop k="symbol_width" v="2"/>
+                                    <prop k="symbol_width_unit" v="MM"/>
+                                </layer>
+                            </symbol>
+                        </layer>
+                    </symbol>
+                    <symbol alpha="1" type="line" name="2">
                         <layer pass="0" class="SimpleLine" locked="0">
                             <prop k="capstyle" v="square"/>
                             <prop k="color" v="200,200,200,255"/>
                             <prop k="customdash" v="5;2"/>
+                            <prop k="customdash_unit" v="MM"/>
                             <prop k="joinstyle" v="bevel"/>
                             <prop k="offset" v="0"/>
+                            <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="solid"/>
                             <prop k="use_custom_dash" v="0"/>
                             <prop k="width" v="2"/>
+                            <prop k="width_unit" v="MM"/>
                         </layer>
                     </symbol>
-                    <symbol outputUnit="MM" alpha="1" type="line" name="4">
+                    <symbol alpha="1" type="line" name="3">
                         <layer pass="0" class="SimpleLine" locked="0">
                             <prop k="capstyle" v="square"/>
                             <prop k="color" v="0,0,0,255"/>
                             <prop k="customdash" v="5;2"/>
+                            <prop k="customdash_unit" v="MM"/>
+                            <prop k="joinstyle" v="bevel"/>
+                            <prop k="offset" v="1"/>
+                            <prop k="offset_unit" v="MM"/>
+                            <prop k="penstyle" v="solid"/>
+                            <prop k="use_custom_dash" v="0"/>
+                            <prop k="width" v="0.05"/>
+                            <prop k="width_unit" v="MM"/>
+                        </layer>
+                        <layer pass="0" class="SimpleLine" locked="0">
+                            <prop k="capstyle" v="square"/>
+                            <prop k="color" v="0,0,0,255"/>
+                            <prop k="customdash" v="5;2"/>
+                            <prop k="customdash_unit" v="MM"/>
+                            <prop k="joinstyle" v="bevel"/>
+                            <prop k="offset" v="-1"/>
+                            <prop k="offset_unit" v="MM"/>
+                            <prop k="penstyle" v="solid"/>
+                            <prop k="use_custom_dash" v="0"/>
+                            <prop k="width" v="0.05"/>
+                            <prop k="width_unit" v="MM"/>
+                        </layer>
+                    </symbol>
+                    <symbol alpha="1" type="line" name="4">
+                        <layer pass="0" class="SimpleLine" locked="0">
+                            <prop k="capstyle" v="square"/>
+                            <prop k="color" v="200,200,200,255"/>
+                            <prop k="customdash" v="5;2"/>
+                            <prop k="customdash_unit" v="MM"/>
+                            <prop k="joinstyle" v="bevel"/>
+                            <prop k="offset" v="0"/>
+                            <prop k="offset_unit" v="MM"/>
+                            <prop k="penstyle" v="solid"/>
+                            <prop k="use_custom_dash" v="0"/>
+                            <prop k="width" v="2"/>
+                            <prop k="width_unit" v="MM"/>
+                        </layer>
+                    </symbol>
+                    <symbol alpha="1" type="line" name="5">
+                        <layer pass="0" class="SimpleLine" locked="0">
+                            <prop k="capstyle" v="square"/>
+                            <prop k="color" v="0,0,0,255"/>
+                            <prop k="customdash" v="5;2"/>
+                            <prop k="customdash_unit" v="MM"/>
                             <prop k="joinstyle" v="bevel"/>
                             <prop k="offset" v="-0.4"/>
+                            <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="solid"/>
                             <prop k="use_custom_dash" v="0"/>
                             <prop k="width" v="0.07"/>
+                            <prop k="width_unit" v="MM"/>
                         </layer>
                         <layer pass="0" class="SimpleLine" locked="0">
                             <prop k="capstyle" v="square"/>
                             <prop k="color" v="0,0,0,255"/>
                             <prop k="customdash" v="5;2"/>
+                            <prop k="customdash_unit" v="MM"/>
                             <prop k="joinstyle" v="bevel"/>
                             <prop k="offset" v="0.4"/>
+                            <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="solid"/>
                             <prop k="use_custom_dash" v="0"/>
                             <prop k="width" v="0.07"/>
+                            <prop k="width_unit" v="MM"/>
                         </layer>
                     </symbol>
-                    <symbol outputUnit="MM" alpha="1" type="line" name="5">
+                    <symbol alpha="1" type="line" name="6">
                         <layer pass="0" class="SimpleLine" locked="0">
                             <prop k="capstyle" v="square"/>
                             <prop k="color" v="180,180,180,255"/>
                             <prop k="customdash" v="5;2"/>
+                            <prop k="customdash_unit" v="MM"/>
                             <prop k="joinstyle" v="bevel"/>
                             <prop k="offset" v="0"/>
+                            <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="solid"/>
                             <prop k="use_custom_dash" v="0"/>
                             <prop k="width" v="1.6"/>
+                            <prop k="width_unit" v="MM"/>
                         </layer>
                     </symbol>
-                    <symbol outputUnit="MM" alpha="1" type="line" name="6">
+                    <symbol alpha="1" type="line" name="7">
                         <layer pass="0" class="SimpleLine" locked="0">
                             <prop k="capstyle" v="square"/>
                             <prop k="color" v="0,0,0,255"/>
                             <prop k="customdash" v="5;2"/>
+                            <prop k="customdash_unit" v="MM"/>
                             <prop k="joinstyle" v="bevel"/>
                             <prop k="offset" v="0"/>
+                            <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="dash"/>
                             <prop k="use_custom_dash" v="0"/>
                             <prop k="width" v="0.2"/>
+                            <prop k="width_unit" v="MM"/>
                         </layer>
                     </symbol>
-                    <symbol outputUnit="MM" alpha="1" type="line" name="7">
+                    <symbol alpha="1" type="line" name="8">
                         <layer pass="0" class="SimpleLine" locked="0">
                             <prop k="capstyle" v="square"/>
                             <prop k="color" v="0,0,0,255"/>
                             <prop k="customdash" v="5;2"/>
+                            <prop k="customdash_unit" v="MM"/>
                             <prop k="joinstyle" v="bevel"/>
                             <prop k="offset" v="-1"/>
+                            <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="dash"/>
                             <prop k="use_custom_dash" v="0"/>
                             <prop k="width" v="0.2"/>
+                            <prop k="width_unit" v="MM"/>
                         </layer>
                         <layer pass="0" class="SimpleLine" locked="0">
                             <prop k="capstyle" v="square"/>
                             <prop k="color" v="0,0,0,255"/>
                             <prop k="customdash" v="5;2"/>
+                            <prop k="customdash_unit" v="MM"/>
                             <prop k="joinstyle" v="bevel"/>
                             <prop k="offset" v="1"/>
+                            <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="dash"/>
                             <prop k="use_custom_dash" v="0"/>
                             <prop k="width" v="0.2"/>
+                            <prop k="width_unit" v="MM"/>
                         </layer>
                     </symbol>
-                    <symbol outputUnit="MM" alpha="1" type="line" name="8">
+                    <symbol alpha="1" type="line" name="9">
                         <layer pass="0" class="SimpleLine" locked="0">
                             <prop k="capstyle" v="square"/>
                             <prop k="color" v="200,200,200,255"/>
                             <prop k="customdash" v="5;2"/>
+                            <prop k="customdash_unit" v="MM"/>
                             <prop k="joinstyle" v="bevel"/>
                             <prop k="offset" v="0"/>
+                            <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="solid"/>
                             <prop k="use_custom_dash" v="0"/>
                             <prop k="width" v="2"/>
-                        </layer>
-                    </symbol>
-                    <symbol outputUnit="MM" alpha="1" type="line" name="9">
-                        <layer pass="0" class="MarkerLine" locked="0">
-                            <prop k="interval" v="15"/>
-                            <prop k="offset" v="0"/>
-                            <prop k="placement" v="interval"/>
-                            <prop k="rotate" v="1"/>
-                        </layer>
-                    </symbol>
-                    <symbol outputUnit="MM" alpha="1" type="marker" name="@11@0">
-                        <layer pass="0" class="EllipseMarker" locked="0">
-                            <prop k="angle" v="90"/>
-                            <prop k="fill_color" v="165,165,165,255"/>
-                            <prop k="fill_color_field" v=""/>
-                            <prop k="height_field" v=""/>
-                            <prop k="outline_color" v="255,255,255,255"/>
-                            <prop k="outline_color_field" v=""/>
-                            <prop k="outline_width" v="0"/>
-                            <prop k="outline_width_field" v=""/>
-                            <prop k="rotation_field" v=""/>
-                            <prop k="symbol_height" v="0.7"/>
-                            <prop k="symbol_name" v="rectangle"/>
-                            <prop k="symbol_name_field" v=""/>
-                            <prop k="symbol_width" v="2"/>
-                            <prop k="width_field" v=""/>
-                        </layer>
-                    </symbol>
-                    <symbol outputUnit="MM" alpha="1" type="marker" name="@9@0">
-                        <layer pass="0" class="SimpleMarker" locked="0">
-                            <prop k="angle" v="90"/>
-                            <prop k="color" v="0,0,0,255"/>
-                            <prop k="color_border" v="0,0,0,255"/>
-                            <prop k="name" v="arrow"/>
-                            <prop k="offset" v="0,0"/>
-                            <prop k="size" v="3"/>
+                            <prop k="width_unit" v="MM"/>
                         </layer>
                     </symbol>
                 </symbols>
@@ -1339,54 +1611,124 @@
             <customproperties>
                 <property key="labeling" value="pal"/>
                 <property key="labeling/addDirectionSymbol" value="false"/>
+                <property key="labeling/angleOffset" value="0"/>
+                <property key="labeling/blendMode" value="0"/>
+                <property key="labeling/bufferBlendMode" value="0"/>
+                <property key="labeling/bufferColorA" value="255"/>
                 <property key="labeling/bufferColorB" value="255"/>
                 <property key="labeling/bufferColorG" value="255"/>
                 <property key="labeling/bufferColorR" value="255"/>
+                <property key="labeling/bufferDraw" value="true"/>
+                <property key="labeling/bufferJoinStyle" value="64"/>
+                <property key="labeling/bufferNoFill" value="false"/>
                 <property key="labeling/bufferSize" value="1"/>
-                <property key="labeling/dataDefinedProperty0" value=""/>
-                <property key="labeling/dataDefinedProperty1" value=""/>
-                <property key="labeling/dataDefinedProperty10" value=""/>
-                <property key="labeling/dataDefinedProperty11" value=""/>
-                <property key="labeling/dataDefinedProperty12" value=""/>
-                <property key="labeling/dataDefinedProperty13" value=""/>
-                <property key="labeling/dataDefinedProperty14" value=""/>
-                <property key="labeling/dataDefinedProperty2" value=""/>
-                <property key="labeling/dataDefinedProperty3" value=""/>
-                <property key="labeling/dataDefinedProperty4" value=""/>
-                <property key="labeling/dataDefinedProperty5" value=""/>
-                <property key="labeling/dataDefinedProperty6" value=""/>
-                <property key="labeling/dataDefinedProperty7" value=""/>
-                <property key="labeling/dataDefinedProperty8" value=""/>
-                <property key="labeling/dataDefinedProperty9" value=""/>
+                <property key="labeling/bufferSizeInMapUnits" value="false"/>
+                <property key="labeling/bufferTransp" value="0"/>
+                <property key="labeling/centroidWhole" value="false"/>
                 <property key="labeling/decimals" value="0"/>
+                <property key="labeling/displayAll" value="false"/>
                 <property key="labeling/dist" value="0"/>
                 <property key="labeling/distInMapUnits" value="false"/>
                 <property key="labeling/enabled" value="true"/>
                 <property key="labeling/fieldName" value="name"/>
+                <property key="labeling/fontBold" value="true"/>
+                <property key="labeling/fontCapitals" value="0"/>
                 <property key="labeling/fontFamily" value="Ubuntu"/>
-                <property key="labeling/fontItalic" value="false"/>
+                <property key="labeling/fontItalic" value="true"/>
+                <property key="labeling/fontLetterSpacing" value="0"/>
+                <property key="labeling/fontLimitPixelSize" value="false"/>
+                <property key="labeling/fontMaxPixelSize" value="10000"/>
+                <property key="labeling/fontMinPixelSize" value="3"/>
                 <property key="labeling/fontSize" value="14"/>
                 <property key="labeling/fontSizeInMapUnits" value="false"/>
                 <property key="labeling/fontStrikeout" value="false"/>
                 <property key="labeling/fontUnderline" value="false"/>
-                <property key="labeling/fontWeight" value="50"/>
+                <property key="labeling/fontWeight" value="75"/>
+                <property key="labeling/fontWordSpacing" value="0"/>
                 <property key="labeling/formatNumbers" value="false"/>
                 <property key="labeling/isExpression" value="false"/>
+                <property key="labeling/labelOffsetInMapUnits" value="true"/>
                 <property key="labeling/labelPerPart" value="false"/>
+                <property key="labeling/leftDirectionSymbol" value="&lt;"/>
+                <property key="labeling/limitNumLabels" value="false"/>
+                <property key="labeling/maxCurvedCharAngleIn" value="20"/>
+                <property key="labeling/maxCurvedCharAngleOut" value="-20"/>
+                <property key="labeling/maxNumLabels" value="2000"/>
                 <property key="labeling/mergeLines" value="false"/>
                 <property key="labeling/minFeatureSize" value="0"/>
+                <property key="labeling/multilineAlign" value="0"/>
+                <property key="labeling/multilineHeight" value="1"/>
+                <property key="labeling/namedStyle" value="Bold Italic"/>
                 <property key="labeling/obstacle" value="true"/>
+                <property key="labeling/placeDirectionSymbol" value="0"/>
                 <property key="labeling/placement" value="3"/>
                 <property key="labeling/placementFlags" value="9"/>
-                <property key="labeling/plussign" value="true"/>
+                <property key="labeling/plussign" value="false"/>
+                <property key="labeling/preserveRotation" value="true"/>
+                <property key="labeling/previewBkgrdColor" value="#ffffff"/>
                 <property key="labeling/priority" value="5"/>
-                <property key="labeling/scaleMax" value="0"/>
-                <property key="labeling/scaleMin" value="0"/>
+                <property key="labeling/quadOffset" value="4"/>
+                <property key="labeling/reverseDirectionSymbol" value="false"/>
+                <property key="labeling/rightDirectionSymbol" value=">"/>
+                <property key="labeling/scaleMax" value="10000000"/>
+                <property key="labeling/scaleMin" value="1"/>
+                <property key="labeling/scaleVisibility" value="false"/>
+                <property key="labeling/shadowBlendMode" value="6"/>
+                <property key="labeling/shadowColorB" value="0"/>
+                <property key="labeling/shadowColorG" value="0"/>
+                <property key="labeling/shadowColorR" value="0"/>
+                <property key="labeling/shadowDraw" value="false"/>
+                <property key="labeling/shadowOffsetAngle" value="135"/>
+                <property key="labeling/shadowOffsetDist" value="1"/>
+                <property key="labeling/shadowOffsetGlobal" value="true"/>
+                <property key="labeling/shadowOffsetUnits" value="1"/>
+                <property key="labeling/shadowRadius" value="1.5"/>
+                <property key="labeling/shadowRadiusAlphaOnly" value="false"/>
+                <property key="labeling/shadowRadiusUnits" value="1"/>
+                <property key="labeling/shadowScale" value="100"/>
+                <property key="labeling/shadowTransparency" value="30"/>
+                <property key="labeling/shadowUnder" value="0"/>
+                <property key="labeling/shapeBlendMode" value="0"/>
+                <property key="labeling/shapeBorderColorA" value="255"/>
+                <property key="labeling/shapeBorderColorB" value="128"/>
+                <property key="labeling/shapeBorderColorG" value="128"/>
+                <property key="labeling/shapeBorderColorR" value="128"/>
+                <property key="labeling/shapeBorderWidth" value="0"/>
+                <property key="labeling/shapeBorderWidthUnits" value="1"/>
+                <property key="labeling/shapeDraw" value="false"/>
+                <property key="labeling/shapeFillColorA" value="255"/>
+                <property key="labeling/shapeFillColorB" value="255"/>
+                <property key="labeling/shapeFillColorG" value="255"/>
+                <property key="labeling/shapeFillColorR" value="255"/>
+                <property key="labeling/shapeJoinStyle" value="64"/>
+                <property key="labeling/shapeOffsetUnits" value="1"/>
+                <property key="labeling/shapeOffsetX" value="0"/>
+                <property key="labeling/shapeOffsetY" value="0"/>
+                <property key="labeling/shapeRadiiUnits" value="1"/>
+                <property key="labeling/shapeRadiiX" value="0"/>
+                <property key="labeling/shapeRadiiY" value="0"/>
+                <property key="labeling/shapeRotation" value="0"/>
+                <property key="labeling/shapeRotationType" value="0"/>
+                <property key="labeling/shapeSVGFile" value=""/>
+                <property key="labeling/shapeSizeType" value="0"/>
+                <property key="labeling/shapeSizeUnits" value="1"/>
+                <property key="labeling/shapeSizeX" value="0"/>
+                <property key="labeling/shapeSizeY" value="0"/>
+                <property key="labeling/shapeTransparency" value="0"/>
+                <property key="labeling/shapeType" value="0"/>
+                <property key="labeling/textColorA" value="255"/>
                 <property key="labeling/textColorB" value="0"/>
                 <property key="labeling/textColorG" value="0"/>
                 <property key="labeling/textColorR" value="0"/>
+                <property key="labeling/textTransp" value="0"/>
+                <property key="labeling/upsidedownLabels" value="0"/>
                 <property key="labeling/wrapChar" value=""/>
+                <property key="labeling/xOffset" value="0"/>
+                <property key="labeling/yOffset" value="0"/>
             </customproperties>
+            <blendMode>0</blendMode>
+            <featureBlendMode>0</featureBlendMode>
+            <layerTransparency>0</layerTransparency>
             <displayfield>name</displayfield>
             <label>0</label>
             <labelfield>name</labelfield>
@@ -1411,34 +1753,40 @@
                 <selectedonly on=""/>
             </labelattributes>
             <edittypes>
-                <edittype type="0" name="bridge"/>
-                <edittype type="0" name="id"/>
-                <edittype type="0" name="lanes"/>
-                <edittype type="0" name="maxspeed"/>
-                <edittype type="0" name="name"/>
-                <edittype type="0" name="oneway"/>
-                <edittype type="0" name="osm_id"/>
-                <edittype type="0" name="ref"/>
-                <edittype type="0" name="smoothenes"/>
-                <edittype type="0" name="surface"/>
-                <edittype type="0" name="tunel"/>
-                <edittype type="0" name="tunnel"/>
-                <edittype type="0" name="type"/>
+                <edittype labelontop="0" editable="1" type="0" name="bridge"/>
+                <edittype labelontop="0" editable="1" type="0" name="id"/>
+                <edittype labelontop="0" editable="1" type="0" name="lanes"/>
+                <edittype labelontop="0" editable="1" type="0" name="maxspeed"/>
+                <edittype labelontop="0" editable="1" type="0" name="name"/>
+                <edittype labelontop="0" editable="1" type="0" name="oneway"/>
+                <edittype labelontop="0" editable="1" type="0" name="osm_id"/>
+                <edittype labelontop="0" editable="1" type="0" name="ref"/>
+                <edittype labelontop="0" editable="1" type="0" name="smoothenes"/>
+                <edittype labelontop="0" editable="1" type="0" name="surface"/>
+                <edittype labelontop="0" editable="1" type="0" name="tunel"/>
+                <edittype labelontop="0" editable="1" type="0" name="tunnel"/>
+                <edittype labelontop="0" editable="1" type="0" name="type"/>
             </edittypes>
             <editform>.</editform>
             <editforminit></editforminit>
             <annotationform>../..</annotationform>
+            <editorlayout>generatedlayout</editorlayout>
+            <excludeAttributesWMS/>
+            <excludeAttributesWFS/>
             <attributeactions/>
         </maplayer>
-        <maplayer minimumScale="0" maximumScale="1e+08" geometry="Polygon" type="vector" hasScaleBasedVisibilityFlag="0">
+        <maplayer minimumScale="0" maximumScale="1e+08" minLabelScale="1" maxLabelScale="1e+08" geometry="Polygon" type="vector" hasScaleBasedVisibilityFlag="0" scaleBasedLabelVisibilityFlag="0">
             <id>water_polygons20130331194441311</id>
-            <datasource>dbname='qgis-bw' host=localhost port=5432 user='dkiselev' password='123' sslmode=disable key='tid' srid=4326 type=MULTIPOLYGON table="water_polygons" (geom) sql=</datasource>
+            <datasource>dbname='tacloban' host=localhost port=5432 user='dkiselev' password='123' sslmode=disable key='tid' srid=4326 type=MULTIPOLYGON table="water_polygons" (geom) sql=</datasource>
             <title></title>
             <abstract></abstract>
+            <keywordList>
+                <value></value>
+            </keywordList>
             <layername>water_polygons</layername>
             <srs>
                 <spatialrefsys>
-                    <proj4>+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs</proj4>
+                    <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
                     <srsid>3452</srsid>
                     <srid>4326</srid>
                     <authid>EPSG:4326</authid>
@@ -1448,16 +1796,18 @@
                     <geographicflag>true</geographicflag>
                 </spatialrefsys>
             </srs>
-            <transparencyLevelInt>255</transparencyLevelInt>
             <provider encoding="System">postgres</provider>
+            <previewExpression></previewExpression>
             <vectorjoins/>
             <renderer-v2 symbollevels="0" type="singleSymbol">
                 <symbols>
-                    <symbol outputUnit="MM" alpha="1" type="fill" name="0">
+                    <symbol alpha="1" type="fill" name="0">
                         <layer pass="0" class="SimpleFill" locked="0">
+                            <prop k="border_width_unit" v="MM"/>
                             <prop k="color" v="200,200,200,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
                             <prop k="offset" v="0,0"/>
+                            <prop k="offset_unit" v="MM"/>
                             <prop k="style" v="solid"/>
                             <prop k="style_border" v="no"/>
                             <prop k="width_border" v="0.26"/>
@@ -1465,9 +1815,12 @@
                     </symbol>
                 </symbols>
                 <rotation field=""/>
-                <sizescale field=""/>
+                <sizescale field="" scalemethod="area"/>
             </renderer-v2>
             <customproperties/>
+            <blendMode>0</blendMode>
+            <featureBlendMode>0</featureBlendMode>
+            <layerTransparency>0</layerTransparency>
             <displayfield>name</displayfield>
             <label>0</label>
             <labelattributes>
@@ -1491,12 +1844,15 @@
                 <selectedonly on=""/>
             </labelattributes>
             <edittypes>
-                <edittype type="0" name="name"/>
-                <edittype type="0" name="type"/>
+                <edittype labelontop="0" editable="1" type="0" name="name"/>
+                <edittype labelontop="0" editable="1" type="0" name="type"/>
             </edittypes>
             <editform>.</editform>
             <editforminit></editforminit>
             <annotationform>.</annotationform>
+            <editorlayout>generatedlayout</editorlayout>
+            <excludeAttributesWMS/>
+            <excludeAttributesWFS/>
             <attributeactions/>
         </maplayer>
     </projectlayers>
@@ -1536,5 +1892,8 @@
         <WMSContactOrganization type="QString"></WMSContactOrganization>
         <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
         <WMSServiceTitle type="QString"></WMSServiceTitle>
+        <DeprecatedLabels>
+            <Enabled type="bool">true</Enabled>
+        </DeprecatedLabels>
     </properties>
 </qgis>
